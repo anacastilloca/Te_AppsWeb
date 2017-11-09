@@ -28,11 +28,18 @@ module.exports = {
       type:'integer'
     },
 
-    //Se añade una referencia a Organización
-    //Un Terapeuta solo puede pertener a una Organización
+   //Un Terapeuta solo puede pertener a una Organización
     idOrganizacion:{
       model:'Organizacion'
+    },
+
+    //Un terapeuta puede tener varios estudiantes
+    estudiantes:{
+      collection:'estudiante',
+      via:'idTerapeuta'
     }
+
+
 
 
 

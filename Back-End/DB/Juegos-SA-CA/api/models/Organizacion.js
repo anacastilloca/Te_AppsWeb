@@ -28,7 +28,6 @@ module.exports = {
       type:'string'
     },
 
-    //Se añade una referencia a Terapeuta
     // Una organización puede tener muchos terapeutas
     terapeutas:{
       collection:'terapeuta',

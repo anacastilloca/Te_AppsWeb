@@ -29,6 +29,11 @@ module.exports = {
     },
     direccionRepresentante:{
       type:'string'
+    },
+
+    //Un estudiante solo puede pertenecer a un Terapeuta
+    idTerapeuta:{
+      model:'Terapeuta'
     }
 
   }
