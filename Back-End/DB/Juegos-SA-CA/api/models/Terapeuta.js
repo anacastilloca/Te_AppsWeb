@@ -9,7 +9,8 @@ module.exports = {
 
   attributes: {
     cedula:{
-      type:'integer'
+      type:'integer',
+      unique:true
     },
     nombre:{
       type:'string'
@@ -25,7 +26,14 @@ module.exports = {
     },
     celular:{
       type:'integer'
+    },
+
+    //Se añade una referencia a Organización
+    //Un Terapeuta solo puede pertener a una Organización
+    idOrganizacion:{
+      model:'Organizacion'
     }
+
 
 
   }

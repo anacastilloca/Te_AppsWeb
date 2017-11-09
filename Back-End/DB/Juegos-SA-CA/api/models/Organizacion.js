@@ -12,7 +12,8 @@ module.exports = {
       type:'string'
     },
     correo:{
-      type:'string'
+      type:'string',
+      unique:true
     },
     contrasenia:{
       type:'string'
@@ -25,6 +26,13 @@ module.exports = {
     },
     descripcion:{
       type:'string'
+    },
+
+    //Se añade una referencia a Terapeuta
+    // Una organización puede tener muchos terapeutas
+    terapeutas:{
+      collection:'terapeuta',
+      via:'idOrganizacion'
     }
 
   }
