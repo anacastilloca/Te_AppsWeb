@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60f0ba0f-756e-4b13-b511-2ce32b18db32" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Back-End/DB/Juegos-SA-CA/config/cors.js" afterPath="$PROJECT_DIR$/Back-End/DB/Juegos-SA-CA/config/cors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Back-End/DB/Juegos-SA-CA/config/models.js" afterPath="$PROJECT_DIR$/Back-End/DB/Juegos-SA-CA/config/models.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,11 +16,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Organizacion.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Organizacion.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Back-End/DB/Juegos-SA-CA/api/models/Organizacion.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
               <caret line="31" column="53" lean-forward="false" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connections.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Back-End/DB/Juegos-SA-CA/config/connections.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-336">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Back-End/DB/Juegos-SA-CA/config/models.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -50,6 +70,7 @@
         <option value="$PROJECT_DIR$/Back-End/DB/Juegos-SA-CA/api/models/Organizacion.js" />
         <option value="$PROJECT_DIR$/Back-End/DB/Juegos-SA-CA/api/models/Terapeuta.js" />
         <option value="$PROJECT_DIR$/Back-End/DB/Juegos-SA-CA/config/cors.js" />
+        <option value="$PROJECT_DIR$/Back-End/DB/Juegos-SA-CA/config/models.js" />
       </list>
     </option>
   </component>
@@ -167,12 +188,12 @@
       <workItem from="1510241869301" duration="98000" />
       <workItem from="1510241984856" duration="8000" />
       <workItem from="1510242004293" duration="6462000" />
-      <workItem from="1510252893289" duration="1881000" />
+      <workItem from="1510252893289" duration="2028000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10151000" />
+    <option name="totallyTimeSpent" value="10298000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -271,20 +292,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Back-End/DB/Juegos-SA-CA/config/connections.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-816">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Back-End/DB/Juegos-SA-CA/config/models.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Back-End/DB/Juegos-SA-CA/api/models/Terapeuta.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -305,6 +312,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" column="53" lean-forward="false" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Back-End/DB/Juegos-SA-CA/config/connections.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-336">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Back-End/DB/Juegos-SA-CA/config/models.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
           <folding />
         </state>
       </provider>
