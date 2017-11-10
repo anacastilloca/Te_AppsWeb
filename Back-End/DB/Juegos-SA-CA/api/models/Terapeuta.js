@@ -41,8 +41,6 @@ module.exports = {
       via:'idTerapeuta'
     },
 
-    /**Para las relaciones many to many**/
-
     //Un terapeuta puede crear muchos campos semánticos de comunicación alternativa
     camposSemanticos:{
       collections:'campoSemantico_T',

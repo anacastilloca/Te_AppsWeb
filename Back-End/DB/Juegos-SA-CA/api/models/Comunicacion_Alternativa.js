@@ -90,13 +90,14 @@ module.exports = {
       type:'string'
     },
 
-    /**Para las relaciones many to many**/
+    /**Para las relaciones one to many**/
 
-    //Un campo semántico de la comunicación alternativa puede pertenecer a varios terapeutas
-    camposSemanticos_T:{
-      collections:'terapeuta_CA',
-      via:'idComunicacionAlternativa'
+    //Un campo semántico de la comunicación alternativa puede pertenecer a un terapeuta
+    idTerapeuta:{
+      model:'Terapeuta'
     },
+
+    /**Para las relaciones many to many**/
 
     //Un campo semántico de la comunicación alternativa puede pertenecer a varios estudiantes
     camposSemanticos_E:{
