@@ -8,6 +8,10 @@
 module.exports = {
 
   attributes: {
+    ruc:{
+      type:'integer',
+      unique:true
+    },
     nombre:{
       type:'string'
     },
