@@ -32,6 +32,7 @@ module.exports = {
 
     /**Para las relaciones one to many**/
 
+    //SECUNDARIO T-SA
     //Una secuencia de acciones puede pertenecer a un terapeuta
     idTerapeuta:{
       model:'Terapeuta'
@@ -39,6 +40,7 @@ module.exports = {
 
     /**Para las relaciones many to many**/
 
+    //DOMINANTE E-SA
     //Una secuencia de acciones puede pertenecer a varios estudiantes
     secuenciasAcciones_E:{
       collections:'estudiante_SA',

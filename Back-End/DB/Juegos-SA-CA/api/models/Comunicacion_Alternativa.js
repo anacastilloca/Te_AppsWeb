@@ -92,6 +92,7 @@ module.exports = {
 
     /**Para las relaciones one to many**/
 
+    //SECUNDARIO T-CA
     //Un campo semántico de la comunicación alternativa puede pertenecer a un terapeuta
     idTerapeuta:{
       model:'Terapeuta'
@@ -99,6 +100,7 @@ module.exports = {
 
     /**Para las relaciones many to many**/
 
+    //DOMINANTE E-CA
     //Un campo semántico de la comunicación alternativa puede pertenecer a varios estudiantes
     camposSemanticos_E:{
       collections:'estudiante_CA',

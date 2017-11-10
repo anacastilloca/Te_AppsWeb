@@ -30,6 +30,7 @@ module.exports = {
 
     /**Para las relaciones one to many**/
 
+    //DOMINANTE O-T
     // Una organización puede tener muchos terapeutas
     terapeutas:{
       collection:'terapeuta',

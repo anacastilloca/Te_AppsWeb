@@ -8,9 +8,15 @@
 module.exports = {
 
   attributes: {
+
+    /**Para las relaciones many to many**/
+
+    //SECUNDARIO E-CA
     idEstudiante:{
       model:'Estudiante'
     },
+
+    //SECUNDARIO E-CA
     idComunicacionAlternativa:{
       model:'Comunicacion_Alternativa'
     }
