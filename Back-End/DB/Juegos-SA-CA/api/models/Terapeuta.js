@@ -28,7 +28,9 @@ module.exports = {
       type:'integer'
     },
 
-   //Un Terapeuta solo puede pertener a una Organización
+    /**Para las relaciones one to many**/
+
+    //Un Terapeuta solo puede pertener a una Organización
     idOrganizacion:{
       model:'Organizacion'
     },
@@ -39,7 +41,9 @@ module.exports = {
       via:'idTerapeuta'
     },
 
-    //Un terapeuta puede crear muchas campos semánticos de comunicación alternativa
+    /**Para las relaciones many to many**/
+
+    //Un terapeuta puede crear muchos campos semánticos de comunicación alternativa
     camposSemanticos:{
       collections:'campoSemantico_T',
       via:'idTerapeuta'

@@ -28,6 +28,8 @@ module.exports = {
       type:'string'
     },
 
+    /**Para las relaciones one to many**/
+
     // Una organización puede tener muchos terapeutas
     terapeutas:{
       collection:'terapeuta',

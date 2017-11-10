@@ -30,9 +30,17 @@ module.exports = {
       type:'string'
     },
 
+    /**Para las relaciones many to many**/
+
     //Una secuencia de acciones puede pertenecer a varios terapeutas
-    secuenciasAcciones:{
+    secuenciasAcciones_T:{
       collections:'terapeuta_SA',
+      via:'idSecuenciaAcciones'
+    },
+
+    //Una secuencia de acciones puede pertenecer a varios estudiantes
+    secuenciasAcciones_E:{
+      collections:'estudiante_SA',
       via:'idSecuenciaAcciones'
     }
 
