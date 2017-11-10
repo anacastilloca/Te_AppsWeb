@@ -37,6 +37,18 @@ module.exports = {
     estudiantes:{
       collection:'estudiante',
       via:'idTerapeuta'
+    },
+
+    //Un terapeuta puede crear muchas campos semánticos de comunicación alternativa
+    camposSemanticos:{
+      collections:'campoSemantico_T',
+      via:'idTerapeuta'
+    },
+
+    //Un terapeuta puede crear muchas secuencia de acciones
+    secuenciasAcciones:{
+      collections:'secuenciaAcciones_T',
+      via:'idTerapeuta'
     }
 
 

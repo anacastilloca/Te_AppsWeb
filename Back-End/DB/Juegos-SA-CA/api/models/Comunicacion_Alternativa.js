@@ -1,5 +1,5 @@
 /**
- * Comunicacion-Alternativa.js
+ * Comunicacion_Alternativa.js
  *
  * @description :: TODO: Entidad que contiene el nombre y las imágenes de los campos semánticos de la Comunicación Alternativa.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
@@ -88,8 +88,13 @@ module.exports = {
     },
     imagen26:{
       type:'string'
-    }
+    },
 
+    //Un campo semántico de la comunicación alternativa puede pertenecer a varios terapeutas
+    camposSemanticos:{
+      collections:'terapeuta_CA',
+      via:'idComunicacionAlternativa'
+    }
   }
 };
 

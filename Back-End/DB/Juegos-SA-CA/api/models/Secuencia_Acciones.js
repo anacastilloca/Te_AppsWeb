@@ -28,6 +28,12 @@ module.exports = {
     },
     imagen6:{
       type:'string'
+    },
+
+    //Una secuencia de acciones puede pertenecer a varios terapeutas
+    secuenciasAcciones:{
+      collections:'terapeuta_SA',
+      via:'idSecuenciaAcciones'
     }
 
   }
