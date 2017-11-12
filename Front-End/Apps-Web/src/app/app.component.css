@@ -1,6 +1,80 @@
-.row{
-  font-family: "Times New Roman", Georgia, serif;
-  text-align:center;
+header{
+  margin: 25px 15px 0px 15px;
+  font-family: Berlin Sans FB, serif;
+  font-weight: 600;
+  border-bottom: double black;
+ }
 
+#img-Encabezado{
+  width: 480px;
+  height:245px;
+  margin-bottom: 30px;
+}
 
+.titulo-Encabezado{
+  margin-top: 4%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 250%;
+  line-height: 120%;
+}
+
+.container{
+  font-family: Berlin Sans FB, serif;
+}
+
+#tituloBody{
+  text-align: center;
+}
+
+#loginBody{
+  text-align: center;
+  padding: 15px 15px 0 0;
+  border: ridge;
+
+}
+
+.labelLogin{
+  background: #565656;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 5px 40px 0 20px;
+  height: 35px;
+  width: 120px;
+  margin: 14px 0 0 0;
+  border: 1px solid;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.inpuLogin{
+  font-size: 16px;
+  padding: 5px 0 0 0;
+  height: 35px;
+  width: 310px;
+  margin: 14px 0 0 0;
+  border: 1px solid;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+#btnIngreso{
+  font-family: Berlin Sans FB, serif;
+}
+
+footer{
+  border-top: double black;
+  margin: 50px 15px 0px 15px;
+}
+
+.tituloFooter{
+  margin: 25px 0px 8px 0px;
+  font-size: 17px;
+}
+.textFooter{
+  font-size: 16px;
+}
+
+#linkEPN{
+  text-align: right;
 }

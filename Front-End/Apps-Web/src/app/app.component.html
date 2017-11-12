@@ -1,52 +1,67 @@
 <header >
   <div class="row">
-    <div class="col-sm-12">
-      <h1>Secuencia de Acciones y Comunicación Alternativa</h1></div>
+    <div class="col-sm-7">
+      <!--<p class="titulo-Encabezado" >Aplicaciones Web que ayudan a fortalecer el área de Comunicación y Lenguaje de personas con
+        <br><strong> discapacidad intelectual</strong></p>-->
+     <p class="titulo-Encabezado" >Aplicaciones Web para personas con
+      <br><strong> discapacidad intelectual</strong></p>
+    </div>
+    <div class="col-sm-5">
+      <img id="img-Encabezado" class="img-thumbnail" src="assets/Imagenes/Img_Encabezado2.jpg">
+    </div>
   </div>
 </header>
 
 <body>
-<div class="row" >
-  <div class="col-sm-6">
-    <h2>Modo:</h2>
-  </div>
-  <div class="col-sm-6">
-    <select>
-      <option value="Administrador">Administrador</option>
-      <option value="Terapeuta">Terapeuta</option>
-      <option value="Estudiante">Estudiante</option>
-    </select>
-  </div>
-</div>
+    <div class="container">
+      <h2 class="titulo-Encabezado">Iniciar Sesión</h2><br>
+      <div class="row" >
 
-<div class="row">
-  <div class="col-sm-6">
-    <h2>Usuario:</h2>
+      <div class="col-sm-3"></div>
+
+      <div id="loginBody" class="col-sm-6">
+        <br>
+        <label class="labelLogin">Modo: </label>
+        <select name="datosLogin" class="inpuLogin">
+          <option value="Administrador">Administrador</option>
+          <option value="Terapeuta">Terapeuta</option>
+          <option value="Estudiante">Estudiante</option>
+        </select>
+        <br>
+
+        <label class="labelLogin">Usuario:</label>
+        <input class="inpuLogin" type="text" name="user">
+        <br>
+
+        <label class="labelLogin">Contraseña: </label>
+        <input class="inpuLogin" type="password" name="password">
+        <br><br>
+        <button id="btnIngreso" type="button" class="btn btn-primary">Ingresar</button>
+
+        <br><br>
+
+      </div>
+    <div class="col-sm-3"> </div>
+    </div>
   </div>
-  <div class="col-sm-6">
-
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-sm-6">
-    <h2>Contraseña:</h2>
-  </div>
-  <div class="col-sm-6">
-
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-sm-12">
-
-  </div>
-</div>
-
 </body>
 
 <footer>
+  <div class="container">
+    <h4 class="tituloFooter">Para servicio de mantenimiento: </h4>
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-5">
+        <label class="textFooter" ><strong>Correo:</strong> servi.manteminiento.apps@epn.edu.ec</label>
+        <br>
+        <label class="textFooter"><strong>Télefono:</strong> 025478963</label>
 
+      </div>
+      <div id="linkEPN" class="col-sm-5">
+        <a href="http://www.epn.edu.ec/" class="btn btn-danger">EPN</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 
