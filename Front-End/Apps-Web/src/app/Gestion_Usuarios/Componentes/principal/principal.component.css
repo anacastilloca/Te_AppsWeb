@@ -1,0 +1,8 @@
+.navegation.col-sm-12{
+  margin: 0px 15px 20px 0px;
+}
+
+.navbar .active{
+  border-bottom: 2px solid green;
+}
+

@@ -1,0 +1,37 @@
+<div class="container" *ngIf="ocultarLogin">
+  <h2 class="titulo-Encabezado">Iniciar Sesión</h2><br>
+  <div class="row" >
+
+    <div class="col-sm-3"></div>
+
+    <div id="loginBody" class="col-sm-6">
+      <br>
+      <label class="labelLogin">Modo: </label>
+      <select name="datosLogin" class="inpuLogin">
+        <option value="Administrador">Administrador</option>
+        <option value="Terapeuta">Terapeuta</option>
+        <option value="Estudiante">Estudiante</option>
+      </select>
+      <br>
+
+      <label class="labelLogin">Usuario:</label>
+      <input class="inpuLogin" type="text" name="user" [(ngModel)]="nombreUsuario">
+      <br>
+
+      <label class="labelLogin">Contraseña: </label>
+      <input class="inpuLogin" type="password" name="password">
+      <br><br>
+      <a id="btnIngreso" class="btn btn-primary" role="button" (click)="ingresarUsuario()" [routerLink]="['/terapeuta']">Ingresar</a>
+
+      <br><br>
+
+    </div>
+    <div class="col-sm-3"> </div>
+  </div>
+</div>
+
+<p *ngIf="llamadoComponentePrincipal">
+  <app-principal></app-principal>
+</p>
+
+

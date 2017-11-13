@@ -1,0 +1,51 @@
+.titulo-Encabezado{
+  margin-top: 4%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 250%;
+  line-height: 120%;
+}
+
+.container{
+  font-family: Berlin Sans FB, serif;
+}
+
+#tituloBody{
+  text-align: center;
+}
+
+#loginBody{
+  text-align: center;
+  padding: 15px 15px 0 0;
+  border: ridge;
+
+}
+
+.labelLogin{
+  background: #565656;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 5px 40px 0 20px;
+  height: 35px;
+  width: 120px;
+  margin: 14px 0 0 0;
+  border: 1px solid;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.inpuLogin{
+  font-size: 16px;
+  padding: 5px 0 0 0;
+  height: 35px;
+  width: 310px;
+  margin: 14px 0 0 0;
+  border: 1px solid;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+#btnIngreso{
+  font-family: Berlin Sans FB, serif;
+}
+
