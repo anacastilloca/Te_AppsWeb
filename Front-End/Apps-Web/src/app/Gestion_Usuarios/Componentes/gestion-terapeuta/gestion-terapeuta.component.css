@@ -1,0 +1,51 @@
+.gestionT{
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+.tituloGT{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 250%;
+  font-weight: bold;
+}
+
+#cuerpoGT{
+  margin: 1% 10% 2% 10%;
+}
+
+.col-sm-4{
+  font-size: 125%;
+}
+
+.labelGT{
+  background: #565656;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 8px 0px 8px 0px;
+  width: 30%;
+  margin: 14px 0 0 0;
+  border: 1px solid;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  text-align: center ;
+}
+
+.inputGT{
+  font-size: 16px;
+  padding: 8px 0 8px 0px;
+  width: 60%;
+  border: 1px solid;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+#btnBuscar{
+   margin: 5% 0 0 0;
+ }
+
+#btnAgregar{
+  margin: 5% 0 0 0;
+}
+
+#tablaTerapeuta{
+  margin: 1% 10% 2% 10%;
+}

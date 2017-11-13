@@ -2,17 +2,17 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a [routerLink]="['/terapeuta']" class="navbar-brand">ADMIN</a>
+        <a [routerLink]="['terapeuta']" class="navbar-brand">ADMIN</a>
       </div>
       <ul class="nav navbar-nav">
         <li>
-          <a [routerLink]="['/terapeuta']" [routerLinkActive]="['active']">
+          <a [routerLink]="['terapeuta']" [routerLinkActive]="['active']">
             <span class="glyphicon glyphicon-education"></span>
             Terapeuta
           </a>
         </li>
         <li>
-          <a [routerLink]="['/estudiante']" [routerLinkActive]="['active']" >
+          <a [routerLink]="['estudiante']" [routerLinkActive]="['active']" >
             <span class="glyphicon glyphicon-star"></span>
             Estudiante
           </a>
@@ -38,6 +38,5 @@
     </div>
   </nav>
 </div>
-
 <router-outlet></router-outlet>
 

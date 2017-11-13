@@ -1,13 +1,13 @@
-.titulo-Encabezado{
+.container{
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+.tituloLogin{
   margin-top: 4%;
   text-align: center;
   text-transform: uppercase;
   font-size: 250%;
   line-height: 120%;
-}
-
-.container{
-  font-family: Berlin Sans FB, serif;
+  font-weight: bold;
 }
 
 #tituloBody{
@@ -16,7 +16,6 @@
 
 #loginBody{
   text-align: center;
-  padding: 15px 15px 0 0;
   border: ridge;
 
 }
@@ -25,9 +24,8 @@
   background: #565656;
   font-size: 16px;
   color: #FFFFFF;
-  padding: 5px 40px 0 20px;
-  height: 35px;
-  width: 120px;
+  padding: 8px 0px 8px 0px;
+  width: 40%;
   margin: 14px 0 0 0;
   border: 1px solid;
   border-bottom-left-radius: 8px;
@@ -36,9 +34,8 @@
 
 .inpuLogin{
   font-size: 16px;
-  padding: 5px 0 0 0;
-  height: 35px;
-  width: 310px;
+  padding: 8px 0 8px 0px;
+  width: 50%;
   margin: 14px 0 0 0;
   border: 1px solid;
   border-bottom-right-radius: 8px;
@@ -46,6 +43,6 @@
 }
 
 #btnIngreso{
-  font-family: Berlin Sans FB, serif;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 

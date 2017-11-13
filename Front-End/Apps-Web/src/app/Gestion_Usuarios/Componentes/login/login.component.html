@@ -1,5 +1,5 @@
 <div class="container" *ngIf="ocultarLogin">
-  <h2 class="titulo-Encabezado">Iniciar Sesión</h2><br>
+  <h2 class="tituloLogin">Iniciar Sesión</h2><br>
   <div class="row" >
 
     <div class="col-sm-3"></div>
@@ -21,7 +21,7 @@
       <label class="labelLogin">Contraseña: </label>
       <input class="inpuLogin" type="password" name="password">
       <br><br>
-      <a id="btnIngreso" class="btn btn-primary" role="button" (click)="ingresarUsuario()" [routerLink]="['/terapeuta']">Ingresar</a>
+      <a id="btnIngreso" class="btn btn-primary" role="button" (click)="ingresarUsuario()" [routerLink]="['adm/terapeuta']">Ingresar</a>
 
       <br><br>
 

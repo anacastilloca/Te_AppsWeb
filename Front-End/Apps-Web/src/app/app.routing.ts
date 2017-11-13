@@ -9,13 +9,13 @@ import { PrincipalComponent } from './Gestion_Usuarios/Componentes/principal/pri
 
 const appRoutes:Routes = [
 
-  { path:'',component: GestionTerapeutaComponent  },
-  { path:'',redirectTo: 'terapeuta',pathMatch: 'full'  },
-  { path:'terapeuta',component: GestionTerapeutaComponent },
+  //{ path:'',component: LoginComponent },
+  //{ path:'',redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
 
-  { path:'estudiante',component: GestionEstudianteComponent },
+  { path:'**',component: LoginComponent  }
 
-  { path:'**',component: GestionTerapeutaComponent  }
+
 ]
 
 export const appRoutingProviders: any[]=[];

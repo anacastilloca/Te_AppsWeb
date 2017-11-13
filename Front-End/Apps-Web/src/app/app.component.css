@@ -1,39 +1,43 @@
 header{
-  margin: 25px 15px 0px 15px;
-  font-family: Berlin Sans FB, serif;
-  font-weight: 600;
+  margin: 20px 15px 0px 15px;
   border-bottom: double black;
  }
 
 #img-Encabezado{
-  width: 480px;
-  height:245px;
+  width: 440px;
+  height:205px;
   margin-bottom: 30px;
 }
 
-.titulo-Encabezado{
-  margin-top: 4%;
+.titulo{
+  margin-top: 2%;
   text-align: center;
   text-transform: uppercase;
-  font-size: 250%;
+  font-size: 280%;
   line-height: 120%;
+  font-family: Berlin Sans FB, serif;
+  font-weight: 500;
 }
 
 .container{
-  font-family: Berlin Sans FB, serif;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 footer{
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   border-top: double black;
+  font-weight: bold;
   margin: 60px 15px 0px 15px;
 }
 
 .tituloFooter{
-  margin: 25px 0px 8px 0px;
+  font-weight: bold;
+  margin: 20px 0px 8px 0px;
   font-size: 17px;
 }
 .textFooter{
   font-size: 16px;
+  font-weight: 400;
 }
 
 #linkEPN{
