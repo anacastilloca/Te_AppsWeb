@@ -46,6 +46,13 @@
   margin: 5% 0 0 0;
 }
 
-#tablaTerapeuta{
+.tablaGT{
   margin: 1% 10% 2% 10%;
+  height: 600px;
+  overflow-y: auto;
+}
+
+.table{
+  font-size: 100%;
+
 }

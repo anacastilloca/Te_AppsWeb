@@ -7,4 +7,8 @@
 .navbar .active{
   border-bottom: 2px solid green;
 }
+.navbar-default .navbar-nav>li>a:hover{
+  border-bottom: 2px solid greenyellow;
+
+}
 
