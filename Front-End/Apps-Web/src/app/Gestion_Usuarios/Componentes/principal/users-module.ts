@@ -1,6 +1,6 @@
 import  { NgModule } from "@angular/core";
 import { CommonModule} from "@angular/common";
-import {FormsModule} from "@angular/forms";
+import {FormsModule} from "@angular/forms"
 import {HttpModule} from "@angular/http";
 import { UsersRoutingModule } from "./users-routing.module";
 
@@ -16,8 +16,8 @@ import { PrincipalComponent } from "./principal.component";
     GestionEstudianteComponent
   ],
   imports:[
-    CommonModule,
     FormsModule,
+    CommonModule,
     HttpModule,
     UsersRoutingModule
   ],

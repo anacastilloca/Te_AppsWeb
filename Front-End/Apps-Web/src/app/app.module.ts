@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { routing, appRoutingProviders } from "./app.routing"
 import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
+import {CommonModule} from "@angular/common";
+
 
 //Importar los modulos
 import { UsersModule } from "./Gestion_Usuarios/Componentes/principal/users-module";
@@ -20,6 +22,7 @@ import { LoginComponent } from './Gestion_Usuarios/Componentes/login/login.compo
   imports: [
     BrowserModule,
     FormsModule,
+    CommonModule,
     HttpModule,
     routing,
     UsersModule

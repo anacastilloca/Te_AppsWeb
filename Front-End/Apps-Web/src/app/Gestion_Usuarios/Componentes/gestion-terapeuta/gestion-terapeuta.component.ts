@@ -1,4 +1,14 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {TerapeutaClass} from "../../Modelos/Terapeuta/TerapeutaClass";
+import {ActivatedRoute, Router} from "@angular/router";
+import {
+  AbstractControl,
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators
+} from '@angular/forms';
+
 
 @Component({
   selector: 'app-gestion-terapeuta',
@@ -7,8 +17,15 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class GestionTerapeutaComponent implements OnInit {
+
+
+  terapeuta:TerapeutaClass;
+
   terapeutas=new Array(1);
-  constructor() { }
+
+  constructor(private _route:ActivatedRoute,private _router:Router) {
+    this.terapeuta= new TerapeutaClass("");
+  }
 
   ngOnInit() {
   }

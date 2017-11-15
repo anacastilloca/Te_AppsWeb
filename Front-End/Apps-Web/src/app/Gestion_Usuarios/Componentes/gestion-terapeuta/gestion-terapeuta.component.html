@@ -34,10 +34,10 @@
           </div>
 
           <div class="modal-body">
-            <form class="form-group">
+            <form class="form-group" #ingresoForm="ngForm" (ngSubmit)="onSubmit()">
               <p>
                 <label class="labelGT">Cédula:</label>
-                <input type="text" placeholder="Ingrese la cédula" class="inputGT" >
+                <input type="text" name="cedula"  placeholder="Ingrese la cédula" class="inputGT" required>
               </p>
               <p>
                 <label class="labelGT">Nombre:</label>
@@ -45,7 +45,11 @@
               </p>
               <p>
                 <label class="labelGT">Contraseña:</label>
-                <input type="password" placeholder="Ingrese la contraseña" class="inputGT"  >
+                <input type="password" placeholder="Ingrese la contraseña" class="inputGT" ([ngModel])="terapeuta.contrasenia"
+                       name="contrasenia" #contrasenia="ngModel">
+                <span *ngIf="!contrasenia">
+                  sdfsfd
+                </span>
               </p>
               <p>
                 <label class="labelGT">Correo:</label>
@@ -96,58 +100,55 @@
             </button>
             <button class="btn btn-warning" data-toggle="modal" data-target="#editarTModal">
               <span class="glyphicon glyphicon-pencil"></span>
+             </button>
+            <!--MODAL para Agregar un Terapeuta-->
+            <div class="modal fade" id="editarTModal" role="dialog">
+              <div class="modal-dialog">
 
-              <!--MODAL para Agregar un Terapeuta-->
-              <div class="modal fade" id="editarTModal" role="dialog">
-                <div class="modal-dialog">
-
-                  <!--Contenido del modal-->
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button class="close" data-dismiss="modal">&times;</button>
-                      <h4 class="modal-title">Actualizar Datos Personales del Terapeuta</h4>
-                    </div>
-
-                    <div class="modal-body">
-                      <form class="form-group">
-                        <p>
-                          <label class="labelGT">Cédula:</label>
-                          <input type="text" placeholder="Ingrese la cédula" class="inputGT" >
-                        </p>
-                        <p>
-                          <label class="labelGT">Nombre:</label>
-                          <input type="text" placeholder="Ingrese el nombre" class="inputGT" >
-                        </p>
-                        <p>
-                          <label class="labelGT">Contraseña:</label>
-                          <input type="password" placeholder="Ingrese la contraseña" class="inputGT"  >
-                        </p>
-                        <p>
-                          <label class="labelGT">Correo:</label>
-                          <input type="text" placeholder="Ingrese el correo" class="inputGT" >
-                        </p>
-                        <p>
-                          <label class="labelGT">Dirección:</label>
-                          <input type="text" placeholder="Ingrese la dirección" class="inputGT" >
-                        </p>
-                        <p>
-                          <label class="labelGT">Celular:</label>
-                          <input type="text" placeholder="Ingresa el celular" class="inputGT" >
-                        </p>
-                        <input type="submit" value="Aceptar" class="btn btn-primary "  >
-                      </form>
-                    </div>
-
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Salir</button>
-                    </div>
-
+                <!--Contenido del modal-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Actualizar Datos Personales del Terapeuta</h4>
                   </div>
+
+                  <div class="modal-body">
+                    <form class="form-group">
+                      <p>
+                        <label class="labelGT">Cédula:</label>
+                        <input type="text" placeholder="Ingrese la cédula" class="inputGT" >
+                      </p>
+                      <p>
+                        <label class="labelGT">Nombre:</label>
+                        <input type="text" placeholder="Ingrese el nombre" class="inputGT" >
+                      </p>
+                      <p>
+                        <label class="labelGT">Contraseña:</label>
+                        <input type="password" placeholder="Ingrese la contraseña" class="inputGT"  >
+                      </p>
+                      <p>
+                        <label class="labelGT">Correo:</label>
+                        <input type="text" placeholder="Ingrese el correo" class="inputGT" >
+                      </p>
+                      <p>
+                        <label class="labelGT">Dirección:</label>
+                        <input type="text" placeholder="Ingrese la dirección" class="inputGT" >
+                      </p>
+                      <p>
+                        <label class="labelGT">Celular:</label>
+                        <input type="text" placeholder="Ingresa el celular" class="inputGT" >
+                      </p>
+                      <input type="submit" value="Aceptar" class="btn btn-primary "  >
+                    </form>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Salir</button>
+                  </div>
+
                 </div>
               </div>
-
-
-            </button>
+            </div>
             <button class="btn btn-danger">
               <span class="glyphicon glyphicon-trash"></span>
             </button>
