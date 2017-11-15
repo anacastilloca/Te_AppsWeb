@@ -7,7 +7,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class GestionTerapeutaComponent implements OnInit {
-  terapeutas=new Array(150);
+  terapeutas=new Array(1);
   constructor() { }
 
   ngOnInit() {
