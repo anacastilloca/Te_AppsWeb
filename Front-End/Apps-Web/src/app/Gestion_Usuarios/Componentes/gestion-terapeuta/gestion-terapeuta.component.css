@@ -16,13 +16,22 @@
   font-size: 125%;
 }
 
+.user{
+  color: red;
+  text-align: left !important;
+}
+
+.form-group{
+  text-align: center;
+}
+
 .labelGT{
   background: #565656;
   font-size: 16px;
   color: #FFFFFF;
   padding: 8px 0px 8px 0px;
   width: 25%;
-  margin: 14px 0 0 0;
+  margin: 10px 0 0 0;
   border: 1px solid;
   border-bottom-left-radius: 8px;
   border-top-left-radius: 8px;
@@ -54,13 +63,12 @@
 
 .table{
   font-size: 100%;
-
-}
-
-.modal{
-  text-align: center;
 }
 
 .modal-title{
   font-weight: bold;
+}
+
+.btn-primary{
+  margin-top: 4%;
 }

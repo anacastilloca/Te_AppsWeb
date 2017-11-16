@@ -1,13 +1,57 @@
-<div class="row">
-  <div class="col-sm-12">
-    <h3>Gestión de datos del Estudiante</h3>
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-4">
-    <label>Buscar</label>
+    <form (ngSubmit)="onSubmit()" #FestividadFormulario="ngForm" nonvalidate>
+          <div class="form-group">
+            <p>
+              <label class="labelGT">Cédula:</label>
+              <input class="inputGT" required maxlength="10"
+                     placeholder="Ingrese la cédula" name="cedulaTerapeuta" type="text"
+                     [(ngModel)]="terapeuta.cedula"
+                     #cedulaTerapeuta="ngModel"
+              />
+              <span *ngIf="!cedulaTerapeuta.valid && cedulaTerapeuta.touched">
+                La cédula es obligatoria
+              </span>
+            </p>
+            <p>
+              <label class="labelGT">Nombre:</label>
+              <input class="inputGT" required maxlength="60"
+                     placeholder="Ingrese el nombre" name="nombreTerapeuta" type="email"
+                     [(ngModel)]="terapeuta.direccion"
+                     #nombreTerapeuta="ngModel"
+              />
+              <span *ngIf="!nombreTerapeuta.valid && nombreTerapeuta.touched">
+                  El nombre es obligatorio obligatorio
+              </span>
+            </p>
+            <label class="labelGT">Contraseña:</label>
+            <input class="inputGT" required minlength="5"
+                   placeholder="Ingrese la contraseña" name="mesFestividad" type="email"
+                   [(ngModel)]="terapeuta.cedula"
+                   #mesFestividad="ngModel"
+                   #mesFestividadTAG
+            >
+            <label class="labelGT">Correo:</label>
+            <input class="inputGT" required minlength="5"
+                   placeholder="Ingrese el correo" name="imagenLugarFestividad" type="email"
+                   [(ngModel)]="terapeuta.correo"
+                   #imagenLugarFestividad="ngModel"
+                   #imagenLugarFestividadTAG
+            >
+            <label class="labelGT">Dirección:</label>
+            <input class="inputGT" required minlength="5"
+                   placeholder="Ingrese el correo" name="imagenLugarFestividad" type="email"
+                   [(ngModel)]="terapeuta.correo"
+                   #imagenLugarFestividad="ngModel"
+                   #imagenLugarFestividadTAG
+            >
+            <label class="labelGT">Celular:</label>
+            <input class="inputGT" required minlength="5"
+                   placeholder="Ingrese el correo" name="imagenLugarFestividad" type="email"
+                   [(ngModel)]="terapeuta.correo"
+                   #imagenLugarFestividad="ngModel"
+                   #imagenLugarFestividadTAG
+            >
+            <input type="submit" value="Aceptar" class="btn btn-primary" />
 
-  </div>
-  <div class="col-sm-4"></div>
-  <div class="col-sm-4"></div>
-</div>
+          </div>
+    </form>
+

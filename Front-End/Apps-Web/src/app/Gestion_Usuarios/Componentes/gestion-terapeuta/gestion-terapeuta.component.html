@@ -34,36 +34,67 @@
           </div>
 
           <div class="modal-body">
-            <form class="form-group" #ingresoForm="ngForm" (ngSubmit)="onSubmit()">
-              <p>
-                <label class="labelGT">Cédula:</label>
-                <input type="text" name="cedula"  placeholder="Ingrese la cédula" class="inputGT" required>
-              </p>
-              <p>
-                <label class="labelGT">Nombre:</label>
-                <input type="text" placeholder="Ingrese el nombre" class="inputGT" >
-              </p>
-              <p>
-                <label class="labelGT">Contraseña:</label>
-                <input type="password" placeholder="Ingrese la contraseña" class="inputGT" ([ngModel])="terapeuta.contrasenia"
-                       name="contrasenia" #contrasenia="ngModel">
-                <span *ngIf="!contrasenia">
-                  sdfsfd
-                </span>
-              </p>
-              <p>
-                <label class="labelGT">Correo:</label>
-                <input type="text" placeholder="Ingrese el correo" class="inputGT" >
-              </p>
-              <p>
+            <form (ngSubmit)="onSubmit()" #FestividadFormulario="ngForm" nonvalidate>
+              <label class="user">La cédula es el usuario</label>
+              <div class="form-group">
+                <p>
+                  <label class="labelGT">Cédula:</label>
+                  <input class="inputGT" required maxlength="10"
+                         placeholder="Ingrese la cédula" name="cedulaTerapeuta" type="text"
+                         [(ngModel)]="terapeuta.cedula"
+                         #cedulaTerapeuta="ngModel"
+                  />
+                  <span *ngIf="!cedulaTerapeuta.valid && cedulaTerapeuta.touched">
+                   <br> La cédula es obligatoria
+                  </span>
+                </p>
+                <p>
+                  <label class="labelGT">Nombre:</label>
+                  <input class="inputGT" required maxlength="60"
+                         placeholder="Ingrese el nombre" name="nombreTerapeuta" type="email"
+                         [(ngModel)]="terapeuta.direccion"
+                         #nombreTerapeuta="ngModel"
+                  />
+                  <span *ngIf="!nombreTerapeuta.valid && nombreTerapeuta.touched">
+                      <br>El nombre es obligatorio
+                  </span>
+                </p>
+                <p>
+                  <label class="labelGT">Contraseña:</label>
+                  <input class="inputGT" required minlength="5" maxlength="15"
+                         placeholder="Ingrese la contraseña" name="contraseniaTerapeuta" type="password"
+                         [(ngModel)]="terapeuta.contrasenia"
+                         #contraseniaTerapeuta="ngModel"
+                  />
+                  <span *ngIf="!contraseniaTerapeuta.valid && contraseniaTerapeuta.touched && !contraseniaTerapeuta.minLength">
+                      <br>La contraseña es obligatoria y debe tener más de 5 caracteres
+                  </span>
+                </p>
+                <p>
+                  <label class="labelGT">Correo:</label>
+                  <input class="inputGT" required maxlength="30"
+                         placeholder="Ingrese el correo" name="correoTerapeuta" type="email"
+                         [(ngModel)]="terapeuta.correo"
+                         #correoTerapeuta="ngModel"
+                  >
+                  <span *ngIf="!correoTerapeuta.valid && contraseniaTerapeuta.touched">
+                      El correo es incorrecto
+                  </span>
+                </p>
                 <label class="labelGT">Dirección:</label>
-                <input type="text" placeholder="Ingrese la dirección" class="inputGT" >
-              </p>
-              <p>
+                <input class="inputGT" required minlength="60"
+                       placeholder="Ingrese el correo" name="direccionTerapeuta" type="email"
+                       [(ngModel)]="terapeuta.direccion"
+                       #direccionTerapeuta="ngModel"
+                >
                 <label class="labelGT">Celular:</label>
-                <input type="text" placeholder="Ingresa el celular" class="inputGT" >
-              </p>
-              <input type="submit" value="Aceptar" class="btn btn-primary "  >
+                <input class="inputGT" required maxlength="10"
+                       placeholder="Ingrese el correo" name="celularTerapeuta" type="email"
+                       [(ngModel)]="terapeuta.celular"
+                       #celularTerapeuta="ngModel"
+                >
+                <input type="submit" value="Aceptar" class="btn btn-primary" />
+              </div>
             </form>
           </div>
 

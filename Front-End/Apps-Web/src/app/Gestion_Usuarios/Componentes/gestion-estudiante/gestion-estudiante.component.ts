@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {TerapeutaClass} from "../../Modelos/Terapeuta/TerapeutaClass";
 
 @Component({
   selector: 'app-gestion-estudiante',
@@ -8,7 +9,10 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class GestionEstudianteComponent implements OnInit {
 
-  constructor() { }
+  terapeuta:TerapeutaClass;
+  constructor() {
+    this.terapeuta= new TerapeutaClass("");
+  }
 
   ngOnInit() {
   }
