@@ -11,7 +11,7 @@ module.exports = {
 
   attributes: {
     cedula:{
-      type:'integer',
+      type:'string',
       unique:true
     },
     nombre:{

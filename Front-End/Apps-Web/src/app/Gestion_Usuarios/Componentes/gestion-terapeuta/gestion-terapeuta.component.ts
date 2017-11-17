@@ -11,16 +11,33 @@ import {TerapeutaService} from "../../Servicios/terapeuta.service";
 })
 export class GestionTerapeutaComponent implements OnInit {
 
+  terapeuta:TerapeutaClass= new TerapeutaClass("");
+  terapeutas:TerapeutaClass[]=[];
 
-  terapeuta:TerapeutaClass;
+  //Para pasar al pop-up ver
+  idTerapeuta:number
 
-  terapeutas=new Array(1);
+  //terapeutas=new Array(1);
 
-  constructor(private _route:ActivatedRoute,private _router:Router) {
-    this.terapeuta= new TerapeutaClass("");
+  constructor(private _terapeutaService:TerapeutaService) {
   }
 
   ngOnInit() {
+
+    this._terapeutaService.buscarUnoPorOrganizacion('?idOrganizacion=4')
+      .subscribe(
+        (terapeutas:TerapeutaClass[]) => {
+          this.terapeutas = terapeutas.map(
+            (terapeuta:TerapeutaClass)=>{
+              terapeuta.editar = false;
+              return terapeuta;
+            }
+          );
+        },
+        error=>{
+          console.log("Error: ",error)
+        }
+      )
 
   }
 

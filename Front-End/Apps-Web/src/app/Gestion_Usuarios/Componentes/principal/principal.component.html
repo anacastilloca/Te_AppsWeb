@@ -23,12 +23,12 @@
         <li>
           <a>
             <span class="glyphicon glyphicon-user"> </span>
-            {{nombreUsurio}}
+            {{cedula_ruc}}
           </a>
         </li>
 
         <li>
-          <a [routerLink]="['/']">
+          <a role="button" (click)="desLogearse()" [routerLink]="['/']">
           <span class="glyphicon glyphicon-lock"></span>
             Salir
           </a>

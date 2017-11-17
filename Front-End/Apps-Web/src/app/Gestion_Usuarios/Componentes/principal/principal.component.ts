@@ -1,4 +1,5 @@
 import { Component, OnInit, DoCheck, ViewEncapsulation } from '@angular/core';
+import {AuthService} from "../../Servicios/auth.service";
 
 @Component({
   selector: 'app-principal',
@@ -8,17 +9,22 @@ import { Component, OnInit, DoCheck, ViewEncapsulation } from '@angular/core';
 })
 export class PrincipalComponent implements OnInit,DoCheck {
 
-  nombreUsurio:string;
+  cedula_ruc:string;
 
-  constructor() { }
+  constructor(private _authService:AuthService) { }
 
   ngOnInit() {
-    this.nombreUsurio=localStorage.getItem('nombreUsuario');
+    this.cedula_ruc=localStorage.getItem('nombreUsuario');
     //console.log(localStorage.getItem('nombreUsuario'));
   }
 
   ngDoCheck(){
-    this.nombreUsurio=localStorage.getItem('nombreUsuario');
+    this.cedula_ruc=localStorage.getItem('nombreUsuario');
+  }
+
+
+  desLogearse(){
+    this._authService.hacerLogOut();
   }
 
 }

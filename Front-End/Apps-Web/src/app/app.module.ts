@@ -17,10 +17,12 @@ import { LoginComponent } from './Gestion_Usuarios/Componentes/login/login.compo
 import {TerapeutaService} from "./Gestion_Usuarios/Servicios/terapeuta.service";
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+
   ],
   imports: [
     BrowserModule,

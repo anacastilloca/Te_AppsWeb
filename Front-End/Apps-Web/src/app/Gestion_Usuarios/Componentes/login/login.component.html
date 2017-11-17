@@ -15,14 +15,13 @@
       {{usersSeleccionado}}
       <br>
       <label class="labelLogin">Usuario:</label>
-      <input class="inpuLogin" type="text" name="user" [(ngModel)]="nombreUsuario" placeholder="Cédula o RUC ">
+      <input class="inpuLogin" type="text" name="user" [(ngModel)]="ruc_cedula" placeholder="Cédula o RUC ">
       <br>
 
       <label class="labelLogin">Contraseña: </label>
-      <input class="inpuLogin" type="password" name="password"/>
+      <input class="inpuLogin" type="password" name="password" [(ngModel)]="contrasenia" placeholder="Contraseña"/>
       <br><br>
       <a id="btnIngreso" class="btn btn-primary" role="button" (click)="ingresarUsuario()" [routerLink]="['adm/terapeuta']">Ingresar</a>
-
       <br><br>
 
     </div>
@@ -31,7 +30,7 @@
 </div>
 
 <p *ngIf="llamadoComponentePrincipal">
-  <app-principal></app-principal>
+ <!-- <app-principal></app-principal>-->
 </p>
 
 

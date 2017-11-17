@@ -26,7 +26,7 @@ module.exports = {
         .exec(function (err,usuarioEncontrado) {
           if(err) return res.serverError("Error",err);
           if(!usuarioEncontrado){
-            return res.notFound("Organización no Encontrado");
+            return res.notFound("Organización no Encontrada");
           }else{
             Passwords.checkPassword({
               passwordAttempt: parametros.contrasenia,
@@ -50,6 +50,7 @@ module.exports = {
                           nombre:usuarioEncontrado.nombre,
                           ruc:usuarioEncontrado.ruc
                         }
+
                       },
                       'organizacionECU');
 
@@ -57,7 +58,7 @@ module.exports = {
                 }
               });
           }
-
+          console.log('Es el ide del user: ',usuarioEncontrado.id)
         });
     }else{
       return res.ok("No envia ruc y password");
