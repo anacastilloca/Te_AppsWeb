@@ -62,7 +62,7 @@ export class TerapeutaService {
   //Por organizacion
   buscarUnoPorOrganizacion(id:string){
     return this._http
-      .get(this.url+`${id}`)
+      .get(this.url+'?idOrganizacion='+`${id}`)
       .map(res => {
         return res.json()
       })

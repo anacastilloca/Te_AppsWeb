@@ -36,19 +36,20 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let tera of terapeutas ; let indice=index">
+        <tr *ngFor="let terapeuta of terapeutas ; let indice=index">
           <td>{{indice+1}}</td>
-          <td>{{tera.cedula}}</td>
-          <td>{{tera.nombre}}</td>
-          <td>{{tera.celular}}</td>
+          <td>{{terapeuta.cedula}}</td>
+          <td>{{terapeuta.nombre}}</td>
+          <td>{{terapeuta.celular}}</td>
           <td>
-            {{tera.id}}
-            <button class="btn btn-info" data-toggle="modal" data-target="#verTModal">Ver </button>
-            <!--<app-ver-pop-up [idTerapeuta]="tera.id" [terapeuta]="tera"></app-ver-pop-up>-->
 
-            <button class="btn btn-warning" data-toggle="modal" data-target="#editarTModal">
+            <button class="btn btn-info" data-toggle="modal" [attr.data-target]="'#' + terapeuta.id">Ver </button>
+            <app-ver-pop-up [idTerapeuta]="terapeuta.id" ></app-ver-pop-up>
+
+            <button class="btn btn-warning" data-toggle="modal" [attr.data-target]="'#' + terapeuta.id">
               <span class="glyphicon glyphicon-pencil"></span>
              </button>
+            <app-editar-pop-up [idTerapeuta]="terapeuta.id"></app-editar-pop-up>
 
             <button class="btn btn-danger">
               <span class="glyphicon glyphicon-trash"></span>

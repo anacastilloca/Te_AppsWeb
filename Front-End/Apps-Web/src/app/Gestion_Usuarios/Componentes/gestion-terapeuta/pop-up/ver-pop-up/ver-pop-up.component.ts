@@ -1,6 +1,7 @@
 import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 import {TerapeutaClass} from "../../../../Modelos/Terapeuta/TerapeutaClass";
 import {TerapeutaService} from "../../../../Servicios/terapeuta.service";
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-ver-pop-up',
@@ -10,22 +11,21 @@ import {TerapeutaService} from "../../../../Servicios/terapeuta.service";
 })
 export class VerPopUpComponent implements OnInit {
 
-  @Input() terapeuta:TerapeutaClass;
-  @Input() terapeutas:TerapeutaClass[];
+  terapeuta:TerapeutaClass;
   @Input() idTerapeuta:number;
 
-  constructor(private _terapeutaService:TerapeutaService) { }
+  constructor(private _terapeutaService:TerapeutaService) {
+
+    this.terapeuta=new TerapeutaClass("");
+  }
 
   ngOnInit() {
-    this._terapeutaService.buscarUnoPorId(this.idTerapeuta)
-      .subscribe(
-        (terapeutas:TerapeutaClass[]) => {
-          this.terapeutas = terapeutas.map(
-            (terapeuta:TerapeutaClass)=>{
+   this._terapeutaService.buscarUnoPorId(this.idTerapeuta)
+         .subscribe(
+        (terapeuta:TerapeutaClass)=>{
               terapeuta.editar = false;
-              return terapeuta;
-            }
-          );
+              console.log(terapeuta)
+              this.terapeuta=terapeuta;
         },
         error=>{
           console.log("Error: ",error)

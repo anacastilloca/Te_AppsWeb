@@ -54,7 +54,7 @@ module.exports = {
                       },
                       'organizacionECU');
 
-                  return res.ok(token);
+                  return res.json(200,{'token':token, 'idOrganizacion':usuarioEncontrado.id});
                 }
               });
           }
