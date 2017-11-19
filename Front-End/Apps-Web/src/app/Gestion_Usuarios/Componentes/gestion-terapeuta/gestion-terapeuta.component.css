@@ -31,5 +31,9 @@
 }
 
 .btn-primary{
+  margin-top: 3%;
+}
+
+.btn-default{
   margin-top: 4%;
 }

@@ -11,8 +11,7 @@ import {TerapeutaService} from "../../Servicios/terapeuta.service";
 })
 export class GestionTerapeutaComponent implements OnInit {
 
-  //Obtener el valor del idOrganización Legeado
-  idOrganizacionLegeada:number;
+  busquedaPorNombre:string;
 
   terapeuta:TerapeutaClass= new TerapeutaClass("");
   terapeutas:TerapeutaClass[]=[];
@@ -20,10 +19,8 @@ export class GestionTerapeutaComponent implements OnInit {
   //Para pasar al pop-up ver
   idTerapeuta:number
 
-  //terapeutas=new Array(1);
 
   constructor(private _terapeutaService:TerapeutaService) {
-
     console.log(localStorage.getItem('idOrganizacionLog'));
 
   }
@@ -45,5 +42,31 @@ export class GestionTerapeutaComponent implements OnInit {
         }
       )
   }
+
+  modalVer(indice){
+    this.terapeuta=this.terapeutas[indice];
+  }
+
+  modalEditar(indice){
+    this.terapeuta=this.terapeutas[indice];
+  }
+
+  modalEliminar(indice){
+    this.terapeuta=this.terapeutas[indice];
+  }
+
+  presentacionActualizadaAgregar(evento){
+    //console.log(evento)
+    this.terapeutas.push(evento);
+  }
+
+  presentacionActualizadaEliminar(evento){
+    let indice = this.terapeutas.indexOf(evento);
+    this.terapeutas.splice(indice,1);
+  }
+
+
+
+
 
 }

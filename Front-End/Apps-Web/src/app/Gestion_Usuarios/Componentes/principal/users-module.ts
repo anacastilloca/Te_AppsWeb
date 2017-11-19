@@ -11,6 +11,7 @@ import { PrincipalComponent } from "./principal.component";
 import { AgregarPopUpComponent } from "../gestion-terapeuta/pop-up/agregar-pop-up/agregar-pop-up.component";
 import { EditarPopUpComponent } from "../gestion-terapeuta/pop-up/editar-pop-up/editar-pop-up.component";
 import { VerPopUpComponent } from "../gestion-terapeuta/pop-up/ver-pop-up/ver-pop-up.component";
+import { EliminarPopUpComponent } from "../gestion-terapeuta/pop-up/eliminar-pop-up/eliminar-pop-up.component"
 
 //Servicios
 import {TokenService} from "../token.service";
@@ -21,6 +22,8 @@ import {UrlService} from "../../Servicios/url.service";
 import {AuthService} from "../../Servicios/auth.service";
 import { TerapeutaService } from "../../Servicios/terapeuta.service";
 
+//Pipes
+import { BusquedaPipe } from "../gestion-terapeuta/pipes/busqueda.pipe"
 
 @NgModule({
   declarations: [
@@ -30,6 +33,8 @@ import { TerapeutaService } from "../../Servicios/terapeuta.service";
     AgregarPopUpComponent,
     EditarPopUpComponent,
     VerPopUpComponent,
+    EliminarPopUpComponent,
+    BusquedaPipe,
   ],
   imports:[
     FormsModule,
@@ -44,6 +49,7 @@ import { TerapeutaService } from "../../Servicios/terapeuta.service";
     AgregarPopUpComponent,
     EditarPopUpComponent,
     VerPopUpComponent,
+    EliminarPopUpComponent,
   ],
   providers:[
     TokenService,

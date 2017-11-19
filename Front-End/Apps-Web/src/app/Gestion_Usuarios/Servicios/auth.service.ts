@@ -21,6 +21,7 @@ export class AuthService {
     this.id_token={};
   }
 
+  //Función pasada al loginComponent
   hacerLoginOrg(ruc,contrasenia){
     this._authOrganizacion.logIn(ruc,contrasenia)
       .map(res => res.json())

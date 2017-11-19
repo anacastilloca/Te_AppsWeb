@@ -60,6 +60,7 @@ module.exports = {
     }
   },
   beforeCreate:function (usuario,cb) {
+    console.log(usuario)
     Passwords.encryptPassword({
       password: usuario.contrasenia
     })
@@ -67,6 +68,7 @@ module.exports = {
         {
           error: function (err) {
             cb("Error en hash password",err)
+
           },
           success: function (hashedPassword) {
             usuario.contrasenia = hashedPassword;

@@ -1,22 +1,23 @@
 <!--MODAL para Agregar un Terapeuta-->
-<div class="modal fade" id={{terapeuta.id}} role="dialog">
+<div class="modal fade" id="editarModal" role="dialog">
   <div class="modal-dialog">
 
     <!--Contenido del modal-->
     <div class="modal-content">
       <div class="modal-header">
         <button class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Ingreso de Datos Personales del Terapeuta</h4>
+        <h4 class="modal-title">Actualizar Datos Personales del Terapeuta</h4>
       </div>
 
       <div class="modal-body">
-        <form (ngSubmit)="onSubmit()" #FestividadFormulario="ngForm" nonvalidate>
+        <form
+                          #FestividadFormulario="ngForm" nonvalidate>
           <label class="user">La cédula es el usuario</label>
           <div class="form-group">
             <p>
               <label class="labelGT">Cédula:</label>
               <input class="inputGT" required maxlength="10"
-                     placeholder="Ingrese la cédula" name="cedulaTerapeuta" type="text"
+                     name="cedulaTerapeuta" type="text"
                      [(ngModel)]="terapeuta.cedula"
                      #cedulaTerapeuta="ngModel"
               />
@@ -27,8 +28,8 @@
             <p>
               <label class="labelGT">Nombre:</label>
               <input class="inputGT" required maxlength="60"
-                     placeholder="Ingrese el nombre" name="nombreTerapeuta" type="email"
-                     [(ngModel)]="terapeuta.direccion"
+                     name="nombreTerapeuta" type="email"
+                     [(ngModel)]="terapeuta.nombre"
                      #nombreTerapeuta="ngModel"
               />
               <span *ngIf="!nombreTerapeuta.valid && nombreTerapeuta.touched">
@@ -38,7 +39,7 @@
             <p>
               <label class="labelGT">Contraseña:</label>
               <input class="inputGT" required minlength="5" maxlength="15"
-                     placeholder="Ingrese la contraseña" name="contraseniaTerapeuta" type="password"
+                     name="contraseniaTerapeuta" type="password"
                      [(ngModel)]="terapeuta.contrasenia"
                      #contraseniaTerapeuta="ngModel"
               />
@@ -49,7 +50,7 @@
             <p>
               <label class="labelGT">Correo:</label>
               <input class="inputGT" required maxlength="30"
-                     placeholder="Ingrese el correo" name="correoTerapeuta" type="email"
+                     name="correoTerapeuta" type="email"
                      [(ngModel)]="terapeuta.correo"
                      #correoTerapeuta="ngModel"
               >
@@ -59,17 +60,18 @@
             </p>
             <label class="labelGT">Dirección:</label>
             <input class="inputGT" required minlength="60"
-                   placeholder="Ingrese el correo" name="direccionTerapeuta" type="email"
+                   name="direccionTerapeuta" type="email"
                    [(ngModel)]="terapeuta.direccion"
                    #direccionTerapeuta="ngModel"
             >
             <label class="labelGT">Celular:</label>
             <input class="inputGT" required maxlength="10"
-                   placeholder="Ingrese el correo" name="celularTerapeuta" type="email"
+                   name="celularTerapeuta" type="email"
                    [(ngModel)]="terapeuta.celular"
                    #celularTerapeuta="ngModel"
             >
-            <input type="submit" value="Aceptar" class="btn btn-primary" [disabled]="!FestividadFormulario.valid"/>
+            <input type="submit" value="Aceptar" class="btn btn-primary" (click)="actualizarTerapeuta(terapeuta,cedulaTerapeuta.value,nombreTerapeuta.value, contraseniaTerapeuta.value,
+                          correoTerapeuta.value,direccionTerapeuta.value,celularTerapeuta.value )" data-dismiss="modal" />
           </div>
         </form>
       </div>

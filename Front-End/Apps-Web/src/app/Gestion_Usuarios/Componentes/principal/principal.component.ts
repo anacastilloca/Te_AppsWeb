@@ -9,17 +9,17 @@ import {AuthService} from "../../Servicios/auth.service";
 })
 export class PrincipalComponent implements OnInit,DoCheck {
 
-  cedula_ruc:string;
+  nombreOrganizacion:string;
 
   constructor(private _authService:AuthService) { }
 
   ngOnInit() {
-    this.cedula_ruc=localStorage.getItem('nombreUsuario');
+    this.nombreOrganizacion=localStorage.getItem('nombreOrganizacion');
     //console.log(localStorage.getItem('nombreUsuario'));
   }
 
   ngDoCheck(){
-    this.cedula_ruc=localStorage.getItem('nombreUsuario');
+    this.nombreOrganizacion=localStorage.getItem('nombreOrganizacion');
   }
 
 

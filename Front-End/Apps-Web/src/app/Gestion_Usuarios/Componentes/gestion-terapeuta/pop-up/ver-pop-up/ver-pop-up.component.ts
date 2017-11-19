@@ -11,26 +11,16 @@ import 'rxjs/add/operator/map';
 })
 export class VerPopUpComponent implements OnInit {
 
-  terapeuta:TerapeutaClass;
-  @Input() idTerapeuta:number;
+  @Input() terapeuta:TerapeutaClass;
+  //terapeuta:TerapeutaClass;
 
-  constructor(private _terapeutaService:TerapeutaService) {
+   constructor(private _terapeutaService:TerapeutaService) {
 
     this.terapeuta=new TerapeutaClass("");
   }
 
   ngOnInit() {
-   this._terapeutaService.buscarUnoPorId(this.idTerapeuta)
-         .subscribe(
-        (terapeuta:TerapeutaClass)=>{
-              terapeuta.editar = false;
-              console.log(terapeuta)
-              this.terapeuta=terapeuta;
-        },
-        error=>{
-          console.log("Error: ",error)
-        }
-      )
+
   }
 
 }

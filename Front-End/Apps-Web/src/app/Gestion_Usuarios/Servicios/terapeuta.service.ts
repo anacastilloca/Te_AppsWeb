@@ -22,6 +22,7 @@ export class TerapeutaService {
   }
 
   ingresoTerapeuta(terapeuta:TerapeutaClass){
+    //console.log(terapeuta)
     let datosEnviar={
       cedula:terapeuta.cedula,
       nombre:terapeuta.nombre,
@@ -66,6 +67,16 @@ export class TerapeutaService {
       .map(res => {
         return res.json()
       })
+  }
+
+  //Por nombre
+  bucarUnoPorNombre(nombre:string){
+    return this._http
+      .get(this.url+'?nombre='+`${nombre}`)
+      .map(res=>{
+        return res.json();
+        }
+      )
   }
 
   //Por ID

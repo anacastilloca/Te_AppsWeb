@@ -13,10 +13,6 @@ import { UsersModule } from "./Gestion_Usuarios/Componentes/principal/users-modu
 import { AppComponent } from './app.component';
 import { LoginComponent } from './Gestion_Usuarios/Componentes/login/login.component';
 
-//Servicios
-import {TerapeutaService} from "./Gestion_Usuarios/Servicios/terapeuta.service";
-
-
 
 @NgModule({
   declarations: [

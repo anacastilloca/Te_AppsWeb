@@ -7,7 +7,8 @@
   <div class="row " id="cuerpoGT">
     <div class="col-sm-5">
       <label class="labelGT">Nombre:</label>
-      <input class="inputGT" type="text" name="buscarTerapeuta" placeholder="Ingrese el Nombre del Terapeuta">
+      <input class="inputGT" type="text" name="buscarTerapeuta"
+             placeholder="Ingrese el Nombre del Terapeuta" [(ngModel)]="busquedaPorNombre"/>
     </div>
     <div class="col-sm-3">
       <button id="btnBuscar" class="btn btn-primary">
@@ -21,7 +22,7 @@
         Agregar
       </button>
     </div>
-    <app-agregar-pop-up [terapeuta]="terapeuta"> </app-agregar-pop-up>
+    <app-agregar-pop-up (actualizacionTablaTerapeutas)="presentacionActualizadaAgregar($event)" > </app-agregar-pop-up>
    </div>
 
   <div class="tablaGT">
@@ -36,27 +37,28 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let terapeuta of terapeutas ; let indice=index">
+        <tr *ngFor="let tera of terapeutas | busqueda:busquedaPorNombre; let indice=index">
           <td>{{indice+1}}</td>
-          <td>{{terapeuta.cedula}}</td>
-          <td>{{terapeuta.nombre}}</td>
-          <td>{{terapeuta.celular}}</td>
+          <td>{{tera.cedula}}</td>
+          <td>{{tera.nombre}}</td>
+          <td>{{tera.celular}}</td>
           <td>
+            <button class="btn btn-info" data-toggle="modal" (click)="modalVer(indice)" data-target="#verModal">Ver </button>
 
-            <button class="btn btn-info" data-toggle="modal" [attr.data-target]="'#' + terapeuta.id">Ver </button>
-            <app-ver-pop-up [idTerapeuta]="terapeuta.id" ></app-ver-pop-up>
-
-            <button class="btn btn-warning" data-toggle="modal" [attr.data-target]="'#' + terapeuta.id">
+            <button class="btn btn-warning" data-toggle="modal" (click)="modalEditar(indice)" data-target="#editarModal">
               <span class="glyphicon glyphicon-pencil"></span>
              </button>
-            <app-editar-pop-up [idTerapeuta]="terapeuta.id"></app-editar-pop-up>
 
             <button class="btn btn-danger">
-              <span class="glyphicon glyphicon-trash"></span>
+              <span class="glyphicon glyphicon-trash" data-toggle="modal" (click)="modalEliminar(indice)" data-target="#eliminarModal"></span>
             </button>
+
           </td>
         </tr>
       </tbody>
     </table>
+    <app-ver-pop-up [terapeuta]="terapeuta" ></app-ver-pop-up>
+    <app-editar-pop-up [terapeuta]="terapeuta"></app-editar-pop-up>
+    <app-eliminar-pop-up [terapeuta]="terapeuta" (eliminarTerapeutas)="presentacionActualizadaEliminar($event)"></app-eliminar-pop-up>
   </div>
 </div>

@@ -11,24 +11,17 @@ import {Router} from "@angular/router";
   encapsulation: ViewEncapsulation.None
 })
 export class LoginComponent implements OnInit {
-  //Paso del id de la Organización Logeada
+  //Paso del id y nombre de la Organización Logeada
   idOrganizacionLog:string;
+  nombreOrganizacion:string;
 
   //Para el llenado del combobox
   usersSeleccionado:string;
   tipoUsers = [{id:1,rol:'Administrador' }, {id:2, rol:'Terapeuta' },  {id:3,rol:'Estudiante' } ];
 
-  //Para presentar el nombre de la persona logeada
-  nombreUsuario:string;
-
-  //Para ocultar el formulario loogin
-  llamadoComponentePrincipal:boolean;
-  ocultarLogin=true;
-
   //Para realizar las validaciones de ingreso
   ruc_cedula:string;
   contrasenia:string;
-  usuarioIngresado:boolean=false;
 
   constructor(private _tokenService:TokenService,
               private _authService:AuthService,
@@ -58,7 +51,9 @@ export class LoginComponent implements OnInit {
             console.log(token);
             console.log(token.idOrganizacion);
             this.idOrganizacionLog=(token.idOrganizacion).toString();
+            this.nombreOrganizacion=token.nombreOrganizacion;
             localStorage.setItem('idOrganizacionLog',this.idOrganizacionLog);
+            localStorage.setItem('nombreOrganizacion',this.nombreOrganizacion)
             this._router.navigate(['adm/terapeuta']);
           },
           errorServidor=>{
