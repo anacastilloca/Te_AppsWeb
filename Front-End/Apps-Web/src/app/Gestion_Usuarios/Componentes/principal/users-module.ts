@@ -12,6 +12,10 @@ import { AgregarPopUpComponent } from "../gestion-terapeuta/pop-up/agregar-pop-u
 import { EditarPopUpComponent } from "../gestion-terapeuta/pop-up/editar-pop-up/editar-pop-up.component";
 import { VerPopUpComponent } from "../gestion-terapeuta/pop-up/ver-pop-up/ver-pop-up.component";
 import { EliminarPopUpComponent } from "../gestion-terapeuta/pop-up/eliminar-pop-up/eliminar-pop-up.component"
+import { AgregarEstudianteComponent } from "../gestion-estudiante/pop-up/agregar-estudiante/agregar-estudiante.component"
+import { EditarEstudianteComponent } from "../gestion-estudiante/pop-up/editar-estudiante/editar-estudiante.component"
+import { VerEstudianteComponent } from "../gestion-estudiante/pop-up/ver-estudiante/ver-estudiante.component"
+import { EliminarEstudianteComponent } from "../gestion-estudiante/pop-up/eliminar-estudiante/eliminar-estudiante.component"
 
 //Servicios
 import {TokenService} from "../token.service";
@@ -24,6 +28,7 @@ import { TerapeutaService } from "../../Servicios/terapeuta.service";
 
 //Pipes
 import { BusquedaPipe } from "../gestion-terapeuta/pipes/busqueda.pipe"
+import {BusquedaEstudiantePipe} from "../gestion-estudiante/pipes/busqueda-estudiante.pipe"
 
 @NgModule({
   declarations: [
@@ -34,7 +39,12 @@ import { BusquedaPipe } from "../gestion-terapeuta/pipes/busqueda.pipe"
     EditarPopUpComponent,
     VerPopUpComponent,
     EliminarPopUpComponent,
+    AgregarEstudianteComponent,
+    VerEstudianteComponent,
+    EditarEstudianteComponent,
+    EliminarEstudianteComponent,
     BusquedaPipe,
+    BusquedaEstudiantePipe
   ],
   imports:[
     FormsModule,
