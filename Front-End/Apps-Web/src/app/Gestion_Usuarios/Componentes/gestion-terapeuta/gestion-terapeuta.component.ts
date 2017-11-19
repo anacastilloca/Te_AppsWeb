@@ -16,17 +16,13 @@ export class GestionTerapeutaComponent implements OnInit {
   terapeuta:TerapeutaClass= new TerapeutaClass("");
   terapeutas:TerapeutaClass[]=[];
 
-  //Para pasar al pop-up ver
-  idTerapeuta:number
-
-
   constructor(private _terapeutaService:TerapeutaService) {
     console.log(localStorage.getItem('idOrganizacionLog'));
 
   }
 
   ngOnInit() {
-    this._terapeutaService.buscarUnoPorOrganizacion(localStorage.getItem('idOrganizacionLog'))
+    this._terapeutaService.buscarVariosPorOrganizacion(localStorage.getItem('idOrganizacionLog'))
       .subscribe(
         (terapeutas:TerapeutaClass[]) => {
           this.terapeutas = terapeutas.map(

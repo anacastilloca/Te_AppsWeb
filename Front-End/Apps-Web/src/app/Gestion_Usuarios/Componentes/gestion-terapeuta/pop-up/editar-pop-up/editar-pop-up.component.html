@@ -10,8 +10,7 @@
       </div>
 
       <div class="modal-body">
-        <form
-                          #FestividadFormulario="ngForm" nonvalidate>
+        <form  #terapeutaFormulario="ngForm" nonvalidate>
           <label class="user">La cédula es el usuario</label>
           <div class="form-group">
             <p>
@@ -70,8 +69,10 @@
                    [(ngModel)]="terapeuta.celular"
                    #celularTerapeuta="ngModel"
             >
-            <input type="submit" value="Aceptar" class="btn btn-primary" (click)="actualizarTerapeuta(terapeuta,cedulaTerapeuta.value,nombreTerapeuta.value, contraseniaTerapeuta.value,
-                          correoTerapeuta.value,direccionTerapeuta.value,celularTerapeuta.value )" data-dismiss="modal" />
+            <input type="submit" value="Aceptar" class="btn btn-primary"
+                   (click)="actualizarTerapeuta(terapeuta,cedulaTerapeuta.value,nombreTerapeuta.value,
+                   contraseniaTerapeuta.value,correoTerapeuta.value,direccionTerapeuta.value,celularTerapeuta.value )"
+                   data-dismiss="modal" />
           </div>
         </form>
       </div>

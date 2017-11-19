@@ -61,22 +61,12 @@ export class TerapeutaService {
   }
 
   //Por organizacion
-  buscarUnoPorOrganizacion(id:string){
+  buscarVariosPorOrganizacion(id:string){
     return this._http
       .get(this.url+'?idOrganizacion='+`${id}`)
       .map(res => {
         return res.json()
       })
-  }
-
-  //Por nombre
-  bucarUnoPorNombre(nombre:string){
-    return this._http
-      .get(this.url+'?nombre='+`${nombre}`)
-      .map(res=>{
-        return res.json();
-        }
-      )
   }
 
   //Por ID

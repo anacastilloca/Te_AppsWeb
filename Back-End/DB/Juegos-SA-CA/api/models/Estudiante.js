@@ -40,6 +40,12 @@ module.exports = {
       model:'Terapeuta'
     },
 
+    //SECUNDARIO O-E
+    //Un estudiante solo puede pertenecer a una Organización
+    idOrganizacion:{
+      model:'Organizacion'
+    },
+
     /**Para las relaciones many to many**/
 
     //DOMINANTE E-CA

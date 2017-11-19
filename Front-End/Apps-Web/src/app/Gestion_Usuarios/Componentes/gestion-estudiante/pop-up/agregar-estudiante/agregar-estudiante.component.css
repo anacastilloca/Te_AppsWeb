@@ -1,0 +1,39 @@
+.user{
+  color: red;
+  text-align: left !important;
+}
+
+.form-group{
+  text-align: center;
+}
+
+.labelGE{
+  background: #565656;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 8px 0px 8px 0px;
+  width: 25%;
+  margin: 10px 0 0 0;
+  border: 1px solid;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  text-align: center ;
+}
+
+.inputGE{
+  font-size: 16px;
+  padding: 8px 0 8px 0px;
+  width: 70%;
+  border: 1px solid;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.modal-title{
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-primary{
+  margin-top: 4%;
+}

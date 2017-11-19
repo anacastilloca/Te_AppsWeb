@@ -24,7 +24,8 @@ import {AuthTerapeutaService} from "../../Servicios/auth-terapeuta.service";
 import {AuthEstudianteService} from "../../Servicios/auth-estudiante.service";
 import {UrlService} from "../../Servicios/url.service";
 import {AuthService} from "../../Servicios/auth.service";
-import { TerapeutaService } from "../../Servicios/terapeuta.service";
+import {TerapeutaService} from "../../Servicios/terapeuta.service";
+import {EstudianteService} from "../../Servicios/estudiante.service"
 
 //Pipes
 import { BusquedaPipe } from "../gestion-terapeuta/pipes/busqueda.pipe"
@@ -68,7 +69,8 @@ import {BusquedaEstudiantePipe} from "../gestion-estudiante/pipes/busqueda-estud
     AuthTerapeutaService,
     UrlService,
     AuthService,
-    TerapeutaService
+    TerapeutaService,
+    EstudianteService
 
   ]
 })

@@ -1,0 +1,39 @@
+.gestionE{
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+.tituloGE{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 250%;
+  font-weight: bold;
+}
+
+#cuerpoGE{
+  margin: 1% 10% 2% 10%;
+}
+
+.col-sm-4{
+  font-size: 125%;
+}
+
+#btnBuscar{
+  margin: 5% 0 0 0;
+}
+
+.tablaGE{
+  margin: 1% 10% 2% 10%;
+  height: 600px;
+  overflow-y: auto;
+}
+
+.table{
+  font-size: 100%;
+}
+
+.btn-primary{
+  margin-top: 3%;
+}
+
+.btn-default{
+  margin-top: 4%;
+}

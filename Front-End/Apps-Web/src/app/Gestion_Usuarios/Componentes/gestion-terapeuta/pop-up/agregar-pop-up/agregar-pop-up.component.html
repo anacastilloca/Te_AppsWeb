@@ -1,5 +1,5 @@
 <!--MODAL para Agregar un Terapeuta-->
-<div class="modal fade" id="agregarTModal" role="dialog">
+<div class="modal fade" id="agregarModal" role="dialog">
   <div class="modal-dialog">
 
     <!--Contenido del modal-->
@@ -57,18 +57,22 @@
                       El correo es incorrecto
                   </span>
             </p>
-            <label class="labelGT">Dirección:</label>
-            <input class="inputGT" required minlength="60"
-                   placeholder="Ingrese el correo" name="direccionTerapeuta" type="text"
-                   [(ngModel)]="terapeutaNuevo.direccion"
-                   #direccionTerapeuta="ngModel"
-            >
-            <label class="labelGT">Celular:</label>
-            <input class="inputGT" required maxlength="10"
-                   placeholder="Ingrese el correo" name="celularTerapeuta" type="text"
-                   [(ngModel)]="terapeutaNuevo.celular"
-                   #celularTerapeuta="ngModel"
-            >
+            <p>
+              <label class="labelGT">Dirección:</label>
+              <input class="inputGT" required minlength="60"
+                     placeholder="Ingrese la dirección" name="direccionTerapeuta" type="text"
+                     [(ngModel)]="terapeutaNuevo.direccion"
+                     #direccionTerapeuta="ngModel"
+              >
+            </p>
+            <p>
+              <label class="labelGT">Celular:</label>
+              <input class="inputGT" required maxlength="10"
+                     placeholder="Ingrese el celular" name="celularTerapeuta" type="text"
+                     [(ngModel)]="terapeutaNuevo.celular"
+                     #celularTerapeuta="ngModel"
+              >
+            </p>
             <input type="submit" value="Aceptar" class="btn btn-primary" data-dismiss="modal" />
       </div>
         </form>

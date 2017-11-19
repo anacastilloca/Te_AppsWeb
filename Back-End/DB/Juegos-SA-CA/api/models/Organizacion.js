@@ -19,7 +19,6 @@ module.exports = {
     },
     correo:{
       type:'email',
-      unique:true
     },
     contrasenia:{
       type:'string'
@@ -41,7 +40,16 @@ module.exports = {
     terapeutas:{
       collection:'terapeuta',
       via:'idOrganizacion'
+    },
+
+    //DOMINANTE O-E
+    // Una organización puede tener muchos estudiantes
+    estudiantes:{
+      collection:'estudiante',
+      via:'idOrganizacion'
     }
+
+
   },
 
   beforeCreate:function (usuario,cb) {

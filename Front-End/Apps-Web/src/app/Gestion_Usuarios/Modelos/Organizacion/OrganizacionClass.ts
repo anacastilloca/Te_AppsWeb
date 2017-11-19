@@ -1,4 +1,4 @@
-export class TerapeutaClass{
+export class OrganizacionClass{
   constructor(
     public ruc?: string,
     public nombre?: string,

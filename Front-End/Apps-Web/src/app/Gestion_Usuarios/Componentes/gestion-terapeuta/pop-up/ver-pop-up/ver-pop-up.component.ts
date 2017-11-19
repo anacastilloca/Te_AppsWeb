@@ -14,7 +14,7 @@ export class VerPopUpComponent implements OnInit {
   @Input() terapeuta:TerapeutaClass;
   //terapeuta:TerapeutaClass;
 
-   constructor(private _terapeutaService:TerapeutaService) {
+   constructor() {
 
     this.terapeuta=new TerapeutaClass("");
   }

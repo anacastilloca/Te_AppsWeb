@@ -1,4 +1,4 @@
-export class TerapeutaClass{
+export class EstudianteClass{
   constructor(
     public cedula?: string,
     public nombre?: string,
@@ -7,10 +7,11 @@ export class TerapeutaClass{
     public nombreRepresentante?: string,
     public celularRepresentante?: number,
     public direccionRepresentante?: string,
+    public idTerapeuta?:number,
+    public idOrganizacion?:number,
     public createdAt?:Date,
     public updatedAt?:Date,
     public id?:number,
-    public idTerapeuta?:number,
     public editar?:boolean
   ){}
 }
