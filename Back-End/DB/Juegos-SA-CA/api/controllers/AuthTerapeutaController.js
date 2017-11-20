@@ -5,6 +5,11 @@
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
+//OOJOO RIVISAR DOCUMENTACION
+// PARA ENCRIPTAR LA contraseña
+//npm install --save machinepack-passwords
+//npm install --save jsonwebtoken   //Para dar los permisos
+
 var Passwords = require('machinepack-passwords');
 var jwt = require('jsonwebtoken');
 
@@ -47,11 +52,11 @@ module.exports = {
                       },
                       'organizacionECU');
 
-                  return res.ok(token);
+                  return res.json(200,{'token':token, 'idTerapeuta':usuarioEncontrado.id, 'nombreTerapeuta':usuarioEncontrado.nombre});
                 }
               });
           }
-
+          console.log('Es el ide del terapeuta: ',usuarioEncontrado.id)
         });
     }else{
       return res.ok("No envia cédula y password");

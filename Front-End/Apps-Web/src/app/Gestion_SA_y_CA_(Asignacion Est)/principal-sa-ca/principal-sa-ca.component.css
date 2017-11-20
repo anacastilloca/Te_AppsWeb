@@ -1,0 +1,14 @@
+.navegation.col-sm-12{
+  margin: 0px 15px 0px 0px;
+  font-family: Berlin Sans FB, serif;
+  font-size: 110%;
+}
+
+.navbar .active{
+  border-bottom: 2px solid green;
+}
+.navbar-default .navbar-nav>li>a:hover{
+  border-bottom: 2px solid greenyellow;
+
+}
+

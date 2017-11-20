@@ -68,6 +68,8 @@ export class AuthService {
     )
   }
 
+  //ESTE METODO ESTA SIENDO OCUPADO EN LOS COMPONENTES PRINCIPALES
+
   hacerLogOut(){
     this._tokenService.token="";
     this.estaLogeado=false;

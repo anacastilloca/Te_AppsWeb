@@ -11,7 +11,7 @@ export class AuthEstudianteService {
     this.url=this._urlPrincipal.url+this.modelo;
   }
 
-  logIn(cedula:number,contrasenia:string){
+  logIn(cedula:string,contrasenia:string){
     let metodo='/logIn'
     let datosEnviar ={
       cedula,

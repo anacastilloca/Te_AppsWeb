@@ -60,7 +60,7 @@ module.exports = {
     }
   },
   beforeCreate:function (usuario,cb) {
-    console.log(usuario)
+    //console.log(usuario)
     Passwords.encryptPassword({
       password: usuario.contrasenia
     })

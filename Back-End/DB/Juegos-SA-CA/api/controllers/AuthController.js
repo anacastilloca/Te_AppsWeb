@@ -58,7 +58,7 @@ module.exports = {
                 }
               });
           }
-          console.log('Es el ide del user: ',usuarioEncontrado.id)
+          console.log('Es el ide de la organizacion: ',usuarioEncontrado.id)
         });
     }else{
       return res.ok("No envia ruc y password");

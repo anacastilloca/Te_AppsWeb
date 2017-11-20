@@ -48,11 +48,11 @@ module.exports = {
                       },
                       'organizacionECU');
 
-                  return res.ok(token);
+                  return res.json(200,{'token':token, 'idEstudiante':usuarioEncontrado.id, 'nombreEstudiante':usuarioEncontrado.nombre});
                 }
               });
           }
-
+          console.log('Es el ide del estudiante: ',usuarioEncontrado.id)
         });
     }else{
       return res.ok("No envia cédula y password");

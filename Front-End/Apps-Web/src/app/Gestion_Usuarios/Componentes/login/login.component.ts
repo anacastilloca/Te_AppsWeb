@@ -3,6 +3,8 @@ import {TokenService} from "../token.service";
 import {AuthService} from "../../Servicios/auth.service";
 import {AuthOrganizacionService} from "../../Servicios/auth-organizacion.service";
 import {Router} from "@angular/router";
+import {AuthTerapeutaService} from "../../Servicios/auth-terapeuta.service";
+import {AuthEstudianteService} from "../../Servicios/auth-estudiante.service";
 
 @Component({
   selector: 'app-login',
@@ -11,9 +13,18 @@ import {Router} from "@angular/router";
   encapsulation: ViewEncapsulation.None
 })
 export class LoginComponent implements OnInit {
+
   //Paso del id y nombre de la Organización Logeada
   idOrganizacionLog:string;
   nombreOrganizacion:string;
+
+  //Paso del id y nombre del terapeuta Logeado
+  idTerapeutaLog:string;
+  nombreTerapeuta:string;
+
+  //Paso del id y nombre del estudiante Logeado
+  idEstudianteLog:string;
+  nombreEstudiante:string;
 
   //Para el llenado del combobox
   usersSeleccionado:string;
@@ -23,9 +34,10 @@ export class LoginComponent implements OnInit {
   ruc_cedula:string;
   contrasenia:string;
 
-  constructor(private _tokenService:TokenService,
-              private _authService:AuthService,
+  constructor(private _authService:AuthService,
               private _authOrganizacion:AuthOrganizacionService,
+              private _authTerapeuta:AuthTerapeutaService,
+              private _authEstudiante:AuthEstudianteService,
               private _router:Router) {
 
   }
@@ -61,10 +73,25 @@ export class LoginComponent implements OnInit {
           })
 
     }else if (!this.usersSeleccionado.localeCompare("Terapeuta")){
-      console.log("Es tera");
-      this._authService.hacerLoginTera(this.ruc_cedula, this.contrasenia)
+      console.log("Es terapeuta");
+      this._authTerapeuta.logIn(this.ruc_cedula,this.contrasenia)
+        .map(res => res.json())
+        .subscribe(
+          token=>{
+            //console.log(token);
+            console.log(token.idTerapeuta);
+            this.idTerapeutaLog=(token.idTerapeuta).toString();
+            this.nombreTerapeuta=token.nombreTerapeuta;
+            localStorage.setItem('idTerapeutaLog',this.idTerapeutaLog);
+            localStorage.setItem('nombreTerapeuta',this.nombreTerapeuta)
+            this._router.navigate(['saca/sa']);
+          },
+          errorServidor=>{
+            alert("El usuario o la contraseña son incorrectos");
+          })
+
     }else {
-      console.log("Es estu");
+      console.log("Es estudiante");
       this._authService.hacerLoginEst(this.ruc_cedula,this.contrasenia)
     }
 

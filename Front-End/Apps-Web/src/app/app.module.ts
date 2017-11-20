@@ -8,11 +8,11 @@ import { CommonModule } from "@angular/common";
 
 //Importar los modulos
 import { UsersModule } from "./Gestion_Usuarios/Componentes/principal/users-module";
+import {SaCaModule} from "./Gestion_SA_y_CA_(Asignacion Est)/principal-sa-ca/sa-ca-module"
 
 //Componentes
 import { AppComponent } from './app.component';
 import { LoginComponent } from './Gestion_Usuarios/Componentes/login/login.component';
-
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { LoginComponent } from './Gestion_Usuarios/Componentes/login/login.compo
     CommonModule,
     HttpModule,
     routing,
-    UsersModule
+    UsersModule,
+    SaCaModule
   ],
   providers: [
     appRoutingProviders,
