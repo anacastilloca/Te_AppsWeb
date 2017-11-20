@@ -1,0 +1,114 @@
+<!--MODAL para Agregar un Terapeuta-->
+<div class="modal fade" id="editarModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!--Contenido del modal-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Actualizar Datos Personales del Estudiante</h4>
+      </div>
+
+      <div class="modal-body">
+        <form (ngSubmit)="onSubmit()" #estudianteFormulario="ngForm" nonvalidate>
+          <label class="user">La cédula es el usuario</label>
+          <div class="form-group">
+            <p>
+              <label class="labelGE">Cédula:</label>
+              <input class="inputGE" required maxlength="10"
+                     placeholder="Ingrese la cédula" name="cedulaEstudiante" type="text"
+                     [(ngModel)]="estudiante.cedula"
+                     #cedulaEstudiante="ngModel"
+              />
+              <span *ngIf="!cedulaEstudiante.valid && cedulaEstudiante.touched">
+                   <br> La cédula es obligatoria
+                  </span>
+            </p>
+            <p>
+              <label class="labelGE">Nombre:</label>
+              <input class="inputGE" required maxlength="60"
+                     placeholder="Ingrese el nombre" name="nombreEstudiante" type="text"
+                     [(ngModel)]="estudiante.nombre"
+                     #nombreEstudiante="ngModel"
+              />
+              <span *ngIf="!nombreEstudiante.valid && nombreEstudiante.touched">
+                      <br>El nombre es obligatorio
+              </span>
+            </p>
+            <p>
+              <label class="labelGE">Edad:</label>
+              <input class="inputGE" required maxlength="2"
+                     placeholder="Ingrese la edad" name="edadEstudiante" type="number"
+                     [(ngModel)]="estudiante.edad"
+                     #edadEstudiante="ngModel"
+              />
+              <span *ngIf="!edadEstudiante.valid && edadEstudiante.touched">
+                      <br>El nombre es obligatorio
+              </span>
+            </p>
+            <p>
+              <label class="labelGE">Contraseña:</label>
+              <input class="inputGE" required minlength="5" maxlength="15"
+                     placeholder="Ingrese la contraseña" name="contraseniaEstudiante" type="password"
+                     [(ngModel)]="estudiante.contrasenia"
+                     #contraseniaEstudiante="ngModel"
+              />
+              <span *ngIf="!contraseniaEstudiante.valid && contraseniaEstudiante.touched && !contraseniaEstudiante.minLength">
+                      <br>La contraseña es obligatoria y debe tener más de 5 caracteres
+              </span>
+            </p>
+            <h4 class="tituloSecundarios">&nbsp;&nbsp;Asigne el terapeuta</h4>
+            <p>
+              <label class="labelGE">Terapeuta:</label>
+              <select [(ngModel)]="estudiante.idTerapeuta" name="terapeutaSeleccionado" class="inputGE"  #terapeutaSeleccionado="ngModel">
+                <option value="" disabled selected>Actual - {{estudiante.idTerapeuta['nombre']}}</option>
+                <option *ngFor="let tera of terapeutas" [value]="tera.id">
+                  {{tera.nombre}}
+                </option>
+              </select>
+              esto imprime{{estudiante.idTerapeuta}}
+            </p>
+            <h3>Datos del Representante</h3>
+            <p>
+              <label class="labelGE">Nombre:</label>
+              <input class="inputGE" required maxlength="30"
+                     placeholder="Ingrese el nombre del representante" name="nomRepreEstudiante" type="text"
+                     [(ngModel)]="estudiante.nombreRepresentante"
+                     #nomRepreEstudiante="ngModel"
+              >
+              <span *ngIf="!nomRepreEstudiante.valid && nomRepreEstudiante.touched">
+                      El nombrel del representante es obligatorio
+              </span>
+            </p>
+            <p>
+              <label class="labelGE">Celular:</label>
+              <input class="inputGE" required maxlength="10"
+                     placeholder="Ingrese el celular del representante" name="celRepreEstudiante" type="number"
+                     [(ngModel)]="estudiante.celularRepresentante"
+                     #celRepreEstudiante="ngModel"
+              >
+            </p>
+            <p>
+              <label class="labelGE">Dirección:</label>
+              <input class="inputGE" required minlength="60"
+                     placeholder="Ingrese la dirección del representante" name="dirRepreEstudiante" type="text"
+                     [(ngModel)]="estudiante.direccionRepresentante"
+                     #dirRepreEstudiante="ngModel"
+              >
+            </p>
+            <input type="submit" value="Aceptar" class="btn btn-primary"
+                   (click)="actualizarEstudiante(estudiante,cedulaEstudiante.value,nombreEstudiante.value, edadEstudiante.value,
+                                          contraseniaEstudiante.value,nomRepreEstudiante.value,celRepreEstudiante.value,
+                                                 dirRepreEstudiante.value,terapeutaSeleccionado.value)"
+                   data-dismiss="modal" />
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Salir</button>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -5,11 +5,13 @@
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
+var Passwords = require('machinepack-passwords');
+
 module.exports = {
 
   attributes: {
     cedula:{
-      type:'integer',
+      type:'string',
       unique:true
     },
     nombre:{
@@ -56,11 +58,43 @@ module.exports = {
       collections:'secuenciaAcciones_T',
       via:'idTerapeuta'
     }
+  },
+  beforeCreate:function (usuario,cb) {
+    console.log(usuario)
+    Passwords.encryptPassword({
+      password: usuario.contrasenia
+    })
+      .exec(
+        {
+          error: function (err) {
+            cb("Error en hash password",err)
 
+          },
+          success: function (hashedPassword) {
+            usuario.contrasenia = hashedPassword;
+            cb()
+          }
+        });
+  },
 
-
-
-
+  beforeUpdate:function (valorAActualizar,cb) {
+    if(valorAActualizar.contrasenia){
+      Passwords.encryptPassword({
+        password: valorAActualizar.contrasenia
+      })
+        .exec(
+          {
+            error: function (err) {
+              cb("Error en hash password",err)
+            },
+            success: function (hashedPassword) {
+              valorAActualizar.contrasenia = hashedPassword;
+              cb()
+            }
+          });
+    }else{
+      cb()
+    }
   }
 };
 

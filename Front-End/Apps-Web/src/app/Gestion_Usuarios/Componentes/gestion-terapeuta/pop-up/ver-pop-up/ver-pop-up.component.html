@@ -1,0 +1,53 @@
+<!--MODAL para Agregar un Terapeuta-->
+<div class="modal fade" id="verModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!--Contenido del modal-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Presentar Datos Personales del Terapeuta</h4>
+      </div>
+
+      <div class="modal-body">
+        <form #terapeutaFormulario="ngForm" nonvalidate>
+          <label class="user">La cédula es el usuario</label>
+          <div class="form-group">
+            <p>
+              <label class="labelGT">Cédula:</label>
+              <input class="inputGT" placeholder="{{terapeuta.cedula}}" name="cedulaTerapeuta" type="text"/>
+            </p>
+
+            <p>
+              <label class="labelGT">Nombre:</label>
+              <input class="inputGT"  placeholder="{{terapeuta.nombre}}" name="nombreTerapeuta" type="text"/>
+            </p>
+
+            <p>
+              <label class="labelGT">Contraseña:</label>
+              <input class="inputGT" placeholder="{{terapeuta.contrasenia}}" name="contraseniaTerapeuta" type="password"/>
+            </p>
+
+            <p>
+              <label class="labelGT">Correo:</label>
+              <input class="inputGT" placeholder="{{terapeuta.correo}}" name="correoTerapeuta" type="email" />
+            </p>
+
+            <label class="labelGT">Dirección:</label>
+            <input class="inputGT" placeholder="{{terapeuta.direccion}}" name="direccionTerapeuta" type="text" />
+
+            <label class="labelGT">Celular:</label>
+            <input class="inputGT" placeholder="{{terapeuta.celular}}" name="celularTerapeuta" type="text"/>
+
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Salir</button>
+      </div>
+
+    </div>
+  </div>
+
+</div>

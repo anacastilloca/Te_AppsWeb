@@ -5,19 +5,20 @@
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
+var Passwords = require('machinepack-passwords');
+
 module.exports = {
 
   attributes: {
     ruc:{
-      type:'integer',
+      type:'string',
       unique:true
     },
     nombre:{
       type:'string'
     },
     correo:{
-      type:'string',
-      unique:true
+      type:'email',
     },
     contrasenia:{
       type:'string'
@@ -39,8 +40,52 @@ module.exports = {
     terapeutas:{
       collection:'terapeuta',
       via:'idOrganizacion'
+    },
+
+    //DOMINANTE O-E
+    // Una organización puede tener muchos estudiantes
+    estudiantes:{
+      collection:'estudiante',
+      via:'idOrganizacion'
     }
 
+
+  },
+
+  beforeCreate:function (usuario,cb) {
+    Passwords.encryptPassword({
+      password: usuario.contrasenia
+    })
+      .exec(
+        {
+          error: function (err) {
+            cb("Error en hash password",err)
+          },
+          success: function (hashedPassword) {
+            usuario.contrasenia = hashedPassword;
+            cb()
+          }
+        });
+  },
+
+  beforeUpdate:function (valorAActualizar,cb) {
+    if(valorAActualizar.contrasenia){
+      Passwords.encryptPassword({
+        password: valorAActualizar.contrasenia
+      })
+        .exec(
+          {
+            error: function (err) {
+              cb("Error en hash password",err)
+            },
+            success: function (hashedPassword) {
+              valorAActualizar.contrasenia = hashedPassword;
+              cb()
+            }
+          });
+    }else{
+      cb()
+    }
   }
 };
 

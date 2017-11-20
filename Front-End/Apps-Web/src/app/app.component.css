@@ -1,0 +1,45 @@
+header{
+  margin: 20px 15px 0px 15px;
+  border-bottom: double black;
+ }
+
+#img-Encabezado{
+  width: 440px;
+  height:205px;
+  margin-bottom: 30px;
+}
+
+.titulo{
+  margin-top: 2%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 280%;
+  line-height: 120%;
+  font-family: Berlin Sans FB, serif;
+  font-weight: 500;
+}
+
+.container{
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+footer{
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  border-top: double black;
+  font-weight: bold;
+  margin: 60px 15px 0px 15px;
+}
+
+.tituloFooter{
+  font-weight: bold;
+  margin: 20px 0px 4px 0px;
+  font-size: 17px;
+}
+.textFooter{
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#linkEPN{
+  text-align: right;
+}

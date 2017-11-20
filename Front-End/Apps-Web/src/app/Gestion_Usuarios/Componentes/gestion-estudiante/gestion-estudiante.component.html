@@ -1,0 +1,73 @@
+<div class="gestionE">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="tituloGT">Gestión de datos del Estudiante</h1>
+    </div>
+  </div>
+  <div class="row " id="cuerpoGE">
+    <div class="col-sm-5">
+      <label class="labelGE">Nombre:</label>
+      <input class="inputGE" type="text" name="buscarTerapeuta"
+             placeholder="Ingrese el Nombre del Estudiante" [(ngModel)]="busquedaPorNombre"/>
+    </div>
+    <div class="col-sm-3">
+      <button id="btnBuscar" class="btn btn-primary">
+        <span class="glyphicon glyphicon-search"></span>
+        Buscar
+      </button>
+    </div>
+    <div class="col-sm-4">
+      <button id="btnAgregar" class="btn btn-success pull-right" data-toggle="modal" data-target="#agregarModal">
+        <span class="glyphicon glyphicon-plus"> </span>
+        Agregar
+      </button>
+    </div>
+    <div>
+      <app-agregar-estudiante (actualizacionTablaEstudiantes)="presentacionActualizadaAgregar($event)" > </app-agregar-estudiante>
+    </div>
+    </div>
+
+  <div class="tablaGE">
+    <table class="table table-hover">
+      <thead class="thead-default">
+      <tr>
+        <th>ID</th>
+        <th>Cédula</th>
+        <th>Nombre</th>
+        <th>Representante</th>
+        <th>Acciones</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let student of estudiantes | busquedaEstudiante:busquedaPorNombre; let indice=index">
+        <td>{{indice+1}}</td>
+        <td>{{student.cedula}}</td>
+        <td>{{student.nombre}}</td>
+        <td>{{student.nombreRepresentante}}</td>
+        <td>
+          <button class="btn btn-info" data-toggle="modal" (click)="modalVer(indice)" data-target="#verModal">Ver </button>
+
+          <button class="btn btn-warning" data-toggle="modal" (click)="modalEditar(indice)" data-target="#editarModal">
+            <span class="glyphicon glyphicon-pencil"></span>
+          </button>
+
+          <button class="btn btn-danger">
+            <span class="glyphicon glyphicon-trash" data-toggle="modal" (click)="modalEliminar(indice)" data-target="#eliminarModal"></span>
+          </button>
+
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="aux">
+      <app-ver-estudiante [estudiante]="estudiante" ></app-ver-estudiante>
+    </div>
+    <div *ngIf="aux">
+      <app-editar-estudiante [estudiante]="estudiante"></app-editar-estudiante>
+    </div>
+    <div *ngIf="aux">
+      <app-eliminar-estudiante [estudiante]="estudiante" (eliminarEstudiantes)="presentacionActualizadaEliminar($event)"></app-eliminar-estudiante>
+    </div>
+  </div>
+</div>
