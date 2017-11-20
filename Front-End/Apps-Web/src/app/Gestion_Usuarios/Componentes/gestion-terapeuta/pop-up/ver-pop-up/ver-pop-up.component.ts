@@ -15,8 +15,7 @@ export class VerPopUpComponent implements OnInit {
   //terapeuta:TerapeutaClass;
 
    constructor() {
-
-    this.terapeuta=new TerapeutaClass("");
+    //this.terapeuta=new TerapeutaClass("");
   }
 
   ngOnInit() {

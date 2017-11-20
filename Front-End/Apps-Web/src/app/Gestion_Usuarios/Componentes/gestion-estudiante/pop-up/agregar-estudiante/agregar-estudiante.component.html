@@ -10,13 +10,13 @@
       </div>
 
       <div class="modal-body">
-        <form (ngSubmit)="agregarTerapeuta()" #terapeutaFormulario="ngForm" nonvalidate>
+        <form #terapeutaFormulario="ngForm" nonvalidate>
           <label class="user">La cédula es el usuario</label>
           <div class="form-group">
             <p>
               <label class="labelGE">Cédula:</label>
               <input class="inputGE" required maxlength="10"
-                     placeholder="Ingrese la cédula" name="cedulaEstudiante" type="text"
+                     placeholder="Ingrese la cédula" name="cedulaEstudiante" type="number"
                      [(ngModel)]="estudianteNuevo.cedula"
                      #cedulaEstudiante="ngModel"
               />
@@ -39,7 +39,7 @@
               <label class="labelGE">Edad:</label>
               <input class="inputGE" required maxlength="2"
                      placeholder="Ingrese la edad" name="edadEstudiante" type="number"
-                     [(ngModel)]="estudianteNuevo.nombre"
+                     [(ngModel)]="estudianteNuevo.edad"
                      #edadEstudiante="ngModel"
               />
               <span *ngIf="!edadEstudiante.valid && edadEstudiante.touched">
@@ -57,7 +57,17 @@
                       <br>La contraseña es obligatoria y debe tener más de 5 caracteres
               </span>
             </p>
-            <h3>Datos del Representante</h3>
+            <h4 class="tituloSecundarios">&nbsp;&nbsp;Asigne el terapeuta</h4>
+            <p>
+              <label class="labelGE">Terapeuta:</label>
+              <select [(ngModel)]="estudianteNuevo.idTerapeuta" name="terapeutaSeleccionado" class="inputGE">
+                <option *ngFor="let tera of terapeutas" [value]="tera.id">
+                  {{tera.nombre}}
+                </option>
+              </select>
+              {{estudianteNuevo.idTerapeuta}}
+            </p>
+            <h3 class="tituloSecundarios">&nbsp;&nbsp;Datos del Representante</h3>
             <p>
               <label class="labelGE">Nombre:</label>
               <input class="inputGE" required maxlength="30"
@@ -85,7 +95,7 @@
                      #dirRepreEstudiante="ngModel"
               >
             </p>
-            <input type="submit" value="Aceptar" class="btn btn-primary" data-dismiss="modal" />
+            <input type="submit" value="Aceptar" class="btn btn-primary" (click)="agregarEstudiante()" data-dismiss="modal" />
           </div>
         </form>
       </div>

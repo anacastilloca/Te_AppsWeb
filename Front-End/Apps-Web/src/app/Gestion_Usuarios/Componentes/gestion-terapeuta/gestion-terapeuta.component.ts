@@ -25,10 +25,10 @@ export class GestionTerapeutaComponent implements OnInit {
     this._terapeutaService.buscarVariosPorOrganizacion(localStorage.getItem('idOrganizacionLog'))
       .subscribe(
         (terapeutas:TerapeutaClass[]) => {
+          localStorage.setItem('terapeutas',JSON.stringify(terapeutas))
           this.terapeutas = terapeutas.map(
             (terapeuta:TerapeutaClass)=>{
               terapeuta.editar = false;
-
                return terapeuta;
             }
           );

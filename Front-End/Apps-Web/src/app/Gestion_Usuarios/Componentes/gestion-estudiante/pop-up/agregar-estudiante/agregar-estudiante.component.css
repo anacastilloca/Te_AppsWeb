@@ -34,6 +34,9 @@
   text-align: center;
 }
 
-.btn-primary{
-  margin-top: 4%;
+.tituloSecundarios{
+  text-align: left;
+  font-weight: bold;
+  margin-top: 1%;
+  margin-bottom: 0%;
 }

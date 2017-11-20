@@ -1,6 +1,8 @@
-import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, DoCheck, Input, OnInit, ViewEncapsulation} from '@angular/core';
 import {EstudianteClass} from "../../../../Modelos/Estudiante/EstudianteClass";
 import {EstudianteService} from "../../../../Servicios/estudiante.service";
+import {TerapeutaClass} from "../../../../Modelos/Terapeuta/TerapeutaClass";
+import {TerapeutaService} from "../../../../Servicios/terapeuta.service";
 
 @Component({
   selector: 'app-editar-estudiante',
@@ -8,15 +10,40 @@ import {EstudianteService} from "../../../../Servicios/estudiante.service";
   styleUrls: ['./editar-estudiante.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class EditarEstudianteComponent implements OnInit {
+export class EditarEstudianteComponent implements OnInit, DoCheck {
 
   @Input() estudiante:EstudianteClass;
+  terapeutas:TerapeutaClass[];
+  nombreTerapeuta:string;
 
-  constructor(private _estudianteService:EstudianteService) {
+  constructor(private _estudianteService:EstudianteService,private _terapeutaService:TerapeutaService) {
     this.estudiante=new EstudianteClass("");
+
   }
 
   ngOnInit() {
+   // console.log('Estudiante',this.estudiante)
+    this.nombreTerapeuta=this.estudiante.idTerapeuta['nombre'];
+    //console.log('IDD',this.nombreTerapeuta)
+    this._terapeutaService.buscarVariosPorOrganizacion(localStorage.getItem('idOrganizacionLog'))
+      .subscribe(
+        (terapeutas:TerapeutaClass[]) => {
+          //localStorage.setItem('terapeutas',JSON.stringify(terapeutas))
+          this.terapeutas = terapeutas.map(
+            (terapeuta:TerapeutaClass)=>{
+              terapeuta.editar = false;
+              return terapeuta;
+            }
+          );
+        },
+        error=>{
+          console.log("Error: ",error)
+        }
+      )
+  }
+  ngDoCheck(){
+    console.log('Estudiante',this.estudiante)
+    console.log('IDD',this.estudiante.idTerapeuta['nombre'])
   }
 
   actualizarEstudiante(estudiante:EstudianteClass,cedula?: string, nombre?: string, edad?: number,

@@ -46,6 +46,15 @@
                      #contraseniaEstudiante="ngModel"
               />
             </p>
+            <h4 class="tituloSecundarios">&nbsp;&nbsp;Terapeuta asignado</h4>
+            <p>
+              <label class="labelGE">Terapeuta:</label>
+              <input class="inputGE"
+                     name="terapeutaDelEstudiante" type="text"
+                     [(ngModel)]="estudiante.idTerapeuta['nombre']"
+                     #terapeutaDelEstudiante="ngModel"
+              />
+            </p>
             <h3>Datos del Representante</h3>
             <p>
               <label class="labelGE">Nombre:</label>

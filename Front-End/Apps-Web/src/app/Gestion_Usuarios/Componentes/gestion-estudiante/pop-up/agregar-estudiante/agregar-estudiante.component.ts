@@ -1,6 +1,8 @@
 import {Component, EventEmitter, OnInit, Output, ViewEncapsulation} from '@angular/core';
 import {EstudianteClass} from "../../../../Modelos/Estudiante/EstudianteClass";
 import {EstudianteService} from "../../../../Servicios/estudiante.service";
+import {TerapeutaClass} from "../../../../Modelos/Terapeuta/TerapeutaClass";
+import {TerapeutaService} from "../../../../Servicios/terapeuta.service";
 
 @Component({
   selector: 'app-agregar-estudiante',
@@ -10,17 +12,38 @@ import {EstudianteService} from "../../../../Servicios/estudiante.service";
 })
 export class AgregarEstudianteComponent implements OnInit {
 
+  //Para obtener los terapeutas
+  terapeutaSeleccionado:string
+  terapeutas:TerapeutaClass[];
+
   //terapeuta:TerapeutaClass;
   @Output() actualizacionTablaEstudiantes = new EventEmitter();
 
   estudianteNuevo:EstudianteClass;
 
-  constructor(private _estudianteServicio:EstudianteService) {
+  constructor(private _estudianteServicio:EstudianteService,private _terapeutaService:TerapeutaService) {
     this.estudianteNuevo=new  EstudianteClass("");
     console.log(localStorage.getItem('idOrganizacionLog'));
+
+    //this.terapeutas=JSON.parse(localStorage.getItem('terapeutas'));
   }
 
   ngOnInit() {
+    this._terapeutaService.buscarVariosPorOrganizacion(localStorage.getItem('idOrganizacionLog'))
+      .subscribe(
+        (terapeutas:TerapeutaClass[]) => {
+          //localStorage.setItem('terapeutas',JSON.stringify(terapeutas))
+          this.terapeutas = terapeutas.map(
+            (terapeuta:TerapeutaClass)=>{
+              terapeuta.editar = false;
+              return terapeuta;
+            }
+          );
+        },
+        error=>{
+          console.log("Error: ",error)
+        }
+      )
   }
 
   agregarEstudiante(){

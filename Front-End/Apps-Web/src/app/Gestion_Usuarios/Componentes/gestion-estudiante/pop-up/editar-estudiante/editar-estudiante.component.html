@@ -10,7 +10,7 @@
       </div>
 
       <div class="modal-body">
-        <form (ngSubmit)="agregarTerapeuta()" #terapeutaFormulario="ngForm" nonvalidate>
+        <form (ngSubmit)="onSubmit()" #estudianteFormulario="ngForm" nonvalidate>
           <label class="user">La cédula es el usuario</label>
           <div class="form-group">
             <p>
@@ -39,7 +39,7 @@
               <label class="labelGE">Edad:</label>
               <input class="inputGE" required maxlength="2"
                      placeholder="Ingrese la edad" name="edadEstudiante" type="number"
-                     [(ngModel)]="estudiante.nombre"
+                     [(ngModel)]="estudiante.edad"
                      #edadEstudiante="ngModel"
               />
               <span *ngIf="!edadEstudiante.valid && edadEstudiante.touched">
@@ -56,6 +56,17 @@
               <span *ngIf="!contraseniaEstudiante.valid && contraseniaEstudiante.touched && !contraseniaEstudiante.minLength">
                       <br>La contraseña es obligatoria y debe tener más de 5 caracteres
               </span>
+            </p>
+            <h4 class="tituloSecundarios">&nbsp;&nbsp;Asigne el terapeuta</h4>
+            <p>
+              <label class="labelGE">Terapeuta:</label>
+              <select [(ngModel)]="estudiante.idTerapeuta" name="terapeutaSeleccionado" class="inputGE"  #terapeutaSeleccionado="ngModel">
+                <option value="" disabled selected>Actual - {{estudiante.idTerapeuta['nombre']}}</option>
+                <option *ngFor="let tera of terapeutas" [value]="tera.id">
+                  {{tera.nombre}}
+                </option>
+              </select>
+              esto imprime{{estudiante.idTerapeuta}}
             </p>
             <h3>Datos del Representante</h3>
             <p>
@@ -86,8 +97,9 @@
               >
             </p>
             <input type="submit" value="Aceptar" class="btn btn-primary"
-                   (click)="actualizarEstudiante(estudiante,cedulaEstudiante.value, nombreEstudiante.value, edadEstudiante.value,
-                   contrasenia.value,nomRepreEstudiante.value,celRepreEstudiante.value,dirRepreEstudiante.value)"
+                   (click)="actualizarEstudiante(estudiante,cedulaEstudiante.value,nombreEstudiante.value, edadEstudiante.value,
+                                          contraseniaEstudiante.value,nomRepreEstudiante.value,celRepreEstudiante.value,
+                                                 dirRepreEstudiante.value,terapeutaSeleccionado.value)"
                    data-dismiss="modal" />
           </div>
         </form>
