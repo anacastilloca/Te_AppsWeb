@@ -10,6 +10,10 @@ import {GestionCaComponent} from "../Componentes/gestion-ca/gestion-ca.component
 import {GestionSaComponent} from "../Componentes/gestion-sa/gestion-sa.component"
 import {AsignacionEstudianteSaCaComponent} from "../Componentes/asignacion-estudiante-sa-ca/asignacion-estudiante-sa-ca.component"
 
+//Servicios
+import {SecueniaAccionesService} from "../Servicios/secuenia-acciones.service"
+import {ComunicacionAlternativaService} from "../Servicios/comunicacion-alternativa.service"
+
 @NgModule({
   declarations: [
     PrincipalSaCaComponent,
@@ -29,7 +33,10 @@ import {AsignacionEstudianteSaCaComponent} from "../Componentes/asignacion-estud
     GestionSaComponent,
     AsignacionEstudianteSaCaComponent,
   ],
-  providers:[  ]
+  providers:[
+    SecueniaAccionesService,
+    ComunicacionAlternativaService,
+  ]
 })
 
 export class SaCaModule{}

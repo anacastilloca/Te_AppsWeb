@@ -10,35 +10,54 @@
       </div>
 
       <div class="modal-body">
-        <form #terapeutaFormulario="ngForm" nonvalidate>
+        <form  #terapeutaFormulario="ngForm" nonvalidate>
           <label class="user">La cédula es el usuario</label>
           <div class="form-group">
             <p>
               <label class="labelGT">Cédula:</label>
-              <input class="inputGT" placeholder="{{terapeuta.cedula}}" name="cedulaTerapeuta" type="text"/>
+              <input class="inputGT" required maxlength="10"
+                     name="cedulaTerapeuta" type="text"
+                     [(ngModel)]="terapeuta.cedula"
+                     #cedulaTerapeuta="ngModel"
+              />
             </p>
-
             <p>
               <label class="labelGT">Nombre:</label>
-              <input class="inputGT"  placeholder="{{terapeuta.nombre}}" name="nombreTerapeuta" type="text"/>
+              <input class="inputGT" required maxlength="60"
+                     name="nombreTerapeuta" type="email"
+                     [(ngModel)]="terapeuta.nombre"
+                     #nombreTerapeuta="ngModel"
+              />
             </p>
-
             <p>
               <label class="labelGT">Contraseña:</label>
-              <input class="inputGT" placeholder="{{terapeuta.contrasenia}}" name="contraseniaTerapeuta" type="password"/>
+              <input class="inputGT" required minlength="5" maxlength="15"
+                     name="contraseniaTerapeuta" type="password"
+                     [(ngModel)]="terapeuta.contrasenia"
+                     #contraseniaTerapeuta="ngModel"
+              />
             </p>
-
             <p>
               <label class="labelGT">Correo:</label>
-              <input class="inputGT" placeholder="{{terapeuta.correo}}" name="correoTerapeuta" type="email" />
+              <input class="inputGT" required maxlength="30"
+                     name="correoTerapeuta" type="email"
+                     [(ngModel)]="terapeuta.correo"
+                     #correoTerapeuta="ngModel"
+              >
             </p>
-
             <label class="labelGT">Dirección:</label>
-            <input class="inputGT" placeholder="{{terapeuta.direccion}}" name="direccionTerapeuta" type="text" />
-
+            <input class="inputGT" required minlength="60"
+                   name="direccionTerapeuta" type="email"
+                   [(ngModel)]="terapeuta.direccion"
+                   #direccionTerapeuta="ngModel"
+            >
             <label class="labelGT">Celular:</label>
-            <input class="inputGT" placeholder="{{terapeuta.celular}}" name="celularTerapeuta" type="text"/>
-
+            <input class="inputGT" required maxlength="10"
+                   name="celularTerapeuta" type="email"
+                   [(ngModel)]="terapeuta.celular"
+                   #celularTerapeuta="ngModel"
+            >
+            <input type="submit" value="Aceptar" class="btn btn-primary" data-dismiss="modal" />
           </div>
         </form>
       </div>
@@ -49,5 +68,4 @@
 
     </div>
   </div>
-
 </div>
