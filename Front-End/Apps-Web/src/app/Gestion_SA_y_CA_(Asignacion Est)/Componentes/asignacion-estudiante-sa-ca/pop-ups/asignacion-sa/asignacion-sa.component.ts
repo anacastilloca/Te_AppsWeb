@@ -21,7 +21,6 @@ export class AsignacionSaComponent implements OnInit {
 
   //Para asignar y quitar SA a un estudiante
   estudianteSA:Estudiante_SAClass;
-  estudiantesSAs:Estudiante_SAClass[];
 
   constructor(private __secuenciaAccionesService:SecueniaAccionesService, private _estudianteSA_Service:EstudianteSaService) {
     this.secuenciaAcciones=new SecuenaAccionesClass("");

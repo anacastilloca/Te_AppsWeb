@@ -1,3 +1,74 @@
-<p>
-  gestion-ca works!
-</p>
+<div class="gestionT">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="tituloGT">Gestión de datos de la Secuencia de Acciones</h1>
+    </div>
+  </div>
+  <div class="row " id="cuerpoGT">
+    <div class="col-sm-5">
+      <label class="labelGT">Nombre:</label>
+      <input class="inputGT" type="text" name="buscarSecuenciaAccion"
+             placeholder="Ingrese el Nombre del campo semántico de la CA" [(ngModel)]="busquedaPorNombre"/>
+    </div>
+    <div class="col-sm-3">
+      <button id="btnBuscar" class="btn btn-primary">
+        <span class="glyphicon glyphicon-search"></span>
+        Buscar
+      </button>
+    </div>
+    <div class="col-sm-4">
+      <button id="btnAgregar" class="btn btn-success pull-right" data-toggle="modal" data-target="#agregarModal">
+        <span class="glyphicon glyphicon-plus"> </span>
+        Agregar
+      </button>
+    </div>
+    <app-agregar-ca (actualizacionTablaCA)="presentacionActualizadaAgregar($event)" > </app-agregar-ca>
+  </div>
+
+  <div class="tablaGT">
+    <table class="table table-hover">
+      <thead class="thead-default">
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Imágenes</th>
+        <th>Acciones</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let ca of comunicacionesAlternativas | busquedaSa:busquedaPorNombre; let indice=index">
+        <td>{{indice+1}}</td>
+        <td>{{ca.nombre}}</td>
+        <td class="img-columns">
+          <img [src]="ca.imagen1" alt=""  class="imagenCA"> &nbsp;
+          <img [src]="ca.imagen2" alt=""  class="imagenCA"> &nbsp;
+          <img [src]="ca.imagen3" alt=""  class="imagenCA"> &nbsp;
+          <img [src]="ca.imagen4" alt=""  class="imagenCA"> &nbsp;
+          <img [src]="ca.imagen5" alt=""  class="imagenCA"> &nbsp;
+          <img [src]="ca.imagen6" alt=""  class="imagenCA"> </td>
+        <td>
+          <button class="btn btn-info" data-toggle="modal" (click)="modalVer(indice)" data-target="#verModal">Ver </button>
+
+          <button class="btn btn-warning" data-toggle="modal" (click)="modalEditar(indice)" data-target="#editarModal">
+            <span class="glyphicon glyphicon-pencil"></span>
+          </button>
+
+          <button class="btn btn-danger">
+            <span class="glyphicon glyphicon-trash" data-toggle="modal" (click)="modalEliminar(indice)" data-target="#eliminarModal"></span>
+          </button>
+
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <div *ngIf="validacionModal">
+      <app-ver-ca [comunicacionAlternativa]="comunicacionAlternativa" ></app-ver-ca>
+    </div>
+    <div *ngIf="validacionModal">
+      <app-editar-ca [comunicacionAlternativa]="comunicacionAlternativa"></app-editar-ca>
+    </div>
+    <div *ngIf="validacionModal">
+     <app-eliminar-ca [comunicacionAlternativa]="comunicacionAlternativa" (eliminarcomunicacionAlternativa)="presentacionActualizadaEliminar($event)"></app-eliminar-ca>
+    </div>
+  </div>
+</div>

@@ -35,6 +35,7 @@ export class GestionSaComponent implements OnInit {
           console.log("Error: ",error)
         }
       )
+    console.log(this.secuenciasAcciones)
   }
 
   modalVer(indice){

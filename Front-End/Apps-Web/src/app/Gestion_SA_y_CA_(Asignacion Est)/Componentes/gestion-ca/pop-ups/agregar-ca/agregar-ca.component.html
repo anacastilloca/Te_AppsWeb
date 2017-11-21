@@ -1,0 +1,132 @@
+<!--MODAL para Agregar un CA-->
+<div class="modal fade" id="agregarModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!--Contenido del modal-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Ingreso de un Campo Semántico de Comunicación Alternativa</h4>
+      </div>
+      <div class="modal-body">
+        <form #terapeutaFormulario="ngForm" nonvalidate>
+          <div class="form-group">
+            <p>
+              <label class="labelGT">Nombre:</label>
+              <input class="inputGT" required maxlength="60"
+                     placeholder="Ingrese el nombre" name="nombreCA" type="text"
+                     [(ngModel)]="comunicacionAlternativaNueva.nombre"
+                     #nombreCA="ngModel"
+              />
+              <span *ngIf="!nombreCA.valid && nombreCA.touched">
+                      <br>El nombre es obligatorio
+              </span>
+            </p>
+            <h4>Imágenes</h4>
+
+            <table class="table table-bordered">
+              <thead>
+              <tr>
+                <th>Ingreso de la 1, 2, 3 y 4 </th>
+                <th>Ingreso de la 5, 6, 7 y 8</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <p>
+                    <input class="inputSA" required
+                           placeholder="Ingrese la primera imagen" name="img1CA" type="text"
+                           [(ngModel)]="comunicacionAlternativaNueva.imagen1"
+                           #img1CA="ngModel"
+                    />
+                    <span *ngIf="!img1CA.valid && img1CA.touched">
+                            <br>Debe ingresar almenos una imágen
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <input class="inputSA"
+                           placeholder="Ingrese la quinta imagen" name="img5CA" type="text"
+                           [(ngModel)]="comunicacionAlternativaNueva.imagen5"
+                           #img5CA="ngModel"
+                    />
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <input class="inputSA"
+                           placeholder="Ingrese la segunda imagen" name="img2CA" type="text"
+                           [(ngModel)]="comunicacionAlternativaNueva.imagen2"
+                           #img2CA="ngModel"
+                    />
+                  </p>
+                </td>
+                <td>
+                  <p >
+                    <input class="inputSA"
+                           placeholder="Ingrese la sexta imagen" name="img6SA" type="text"
+                           [(ngModel)]="comunicacionAlternativaNueva.imagen6"
+                           #img6SA="ngModel"
+                    />
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <input class="inputSA"
+                           placeholder="Ingrese la tercera imagen" name="img3CA" type="text"
+                           [(ngModel)]="comunicacionAlternativaNueva.imagen3"
+                           #img3CA="ngModel"
+                    />
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <input class="inputSA"
+                           placeholder="Ingrese la septima imagen" name="img7CA" type="text"
+                           [(ngModel)]="comunicacionAlternativaNueva.imagen7"
+                           #img7CA="ngModel"
+                    />
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <input class="inputSA"
+                           placeholder="Ingrese la cuarta imagen" name="img4CA" type="text"
+                           [(ngModel)]="comunicacionAlternativaNueva.imagen4"
+                           #img4CA="ngModel"
+                    />
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <input class="inputSA"
+                           placeholder="Ingrese la octava imagen" name="img8CA" type="text"
+                           [(ngModel)]="comunicacionAlternativaNueva.imagen8"
+                           #img8CA="ngModel"
+                    />
+                  </p>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+
+            <input type="submit" value="Aceptar" class="btn btn-primary" (click)="agregarCA()" data-dismiss="modal" />
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Salir</button>
+      </div>
+
+    </div>
+  </div>
+</div>
