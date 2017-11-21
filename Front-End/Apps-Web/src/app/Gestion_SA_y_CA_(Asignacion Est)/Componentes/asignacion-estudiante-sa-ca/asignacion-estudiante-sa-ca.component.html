@@ -47,7 +47,7 @@
           </button>
 
           <button class="btn btn-success">
-            <span class="glyphicon glyphicon-picture" data-toggle="modal" (click)="modalEliminar(indice)" data-target="#eliminarModal"></span>
+            <span class="glyphicon glyphicon-picture" data-toggle="modal" (click)="modalasignacionCAModal(indice)" data-target="#asignacionCAModal"></span>
             CA
           </button>
 
@@ -56,14 +56,14 @@
       </tbody>
     </table>
 
-    <div *ngIf="aux">
-      <!--<app-ver-estudiante [estudiante]="estudiante" ></app-ver-estudiante>-->
+    <div *ngIf="validacionModal">
+      <app-ver-info-est [estudiante]="estudiante" ></app-ver-info-est>
     </div>
     <div *ngIf="validacionModal">
       <app-asignacion-sa [estudiante]="estudiante"></app-asignacion-sa>
     </div>
-    <div *ngIf="aux">
-      <!--<app-eliminar-estudiante [estudiante]="estudiante" (eliminarEstudiantes)="presentacionActualizadaEliminar($event)"></app-eliminar-estudiante>-->
+    <div *ngIf="validacionModal">
+      <app-asignacion-ca [estudiante]="estudiante"></app-asignacion-ca>
     </div>
   </div>
 </div>

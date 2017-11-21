@@ -1,3 +1,112 @@
-<p>
-  ver-info-est works!
-</p>
+<!--MODAL para ver un Estudiante-->
+<div class="modal fade" id="verModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!--Contenido del modal-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Datos Personales del Estudiante</h4>
+      </div>
+
+      <div class="modal-body">
+        <form #terapeutaFormulario="ngForm" nonvalidate>
+          <div class="form-group">
+            <p>
+              <label class="labelGE">Cédula:</label>
+              <input class="inputGE" required maxlength="10"
+                     placeholder="Ingrese la cédula" name="cedulaEstudiante" type="text"
+                     [(ngModel)]="estudiante.cedula"
+                     #cedulaEstudiante="ngModel"
+              />
+
+            </p>
+            <p>
+              <label class="labelGE">Nombre:</label>
+              <input class="inputGE" required maxlength="60"
+                     placeholder="Ingrese el nombre" name="nombreEstudiante" type="text"
+                     [(ngModel)]="estudiante.nombre"
+                     #nombreEstudiante="ngModel"
+              />
+            </p>
+            <p>
+              <label class="labelGE">Edad:</label>
+              <input class="inputGE" required maxlength="2"
+                     placeholder="Ingrese la edad" name="edadEstudiante" type="number"
+                     [(ngModel)]="estudiante.edad"
+                     #edadEstudiante="ngModel"
+              />
+            </p>
+            <h3>Datos del Representante</h3>
+            <p>
+              <label class="labelGE">Nombre:</label>
+              <input class="inputGE" required maxlength="30"
+                     placeholder="Ingrese el nombre del representante" name="nomRepreEstudiante" type="text"
+                     [(ngModel)]="estudiante.nombreRepresentante"
+                     #nomRepreEstudiante="ngModel"
+              >
+            </p>
+            <p>
+              <label class="labelGE">Celular:</label>
+              <input class="inputGE" required maxlength="10"
+                     placeholder="Ingrese el celular del representante" name="celRepreEstudiante" type="number"
+                     [(ngModel)]="estudiante.celularRepresentante"
+                     #celRepreEstudiante="ngModel"
+              >
+            </p>
+            <p>
+              <label class="labelGE">Dirección:</label>
+              <input class="inputGE" required minlength="60"
+                     placeholder="Ingrese la dirección del representante" name="dirRepreEstudiante" type="text"
+                     [(ngModel)]="estudiante.direccionRepresentante"
+                     #dirRepreEstudiante="ngModel"
+              >
+            </p>
+            <div class="row">
+              <div class="col-sm-3">
+                <button class="btn btn-info" (click)="verSA(estudiante.id)" data-toggle="collapse" data-target="#collapseSA" > Ver SA asignadas</button>
+                <div *ngIf="auxSA" id="collapseSA">
+                  <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                      <th>SA</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let estu_sa of estudiantesSAs">
+                      <td>{{estu_sa.idSecuenciaAcciones['nombre']}}</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+                <div class="col-sm-3">
+                  <button class="btn btn-info" (click)="verCA(estudiante.id)" data-toggle="collapse" data-target="#collapseCA"> Ver CA asignadas</button>
+                  <div *ngIf="auxCA" id="collapseCA">
+                    <table class="table table-bordered">
+                      <thead>
+                      <tr>
+                        <th>CA</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr *ngFor="let estu_ca of estudiantesCAs">
+                        <td>{{estu_ca.idComunicacionAlternativa['nombre']}}</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Salir</button>
+      </div>
+
+    </div>
+  </div>
+</div>

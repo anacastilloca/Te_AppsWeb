@@ -8,7 +8,7 @@ import {Estudiante_SAClass} from "../Modelos/Estudiante_SA/Estudiante_SAClass";
 export class EstudianteSaService {
 
   url:string;
-  modelo='Secuencia_Acciones'
+  modelo='Estudiante_SA'
   headers:Headers
 
   constructor(private _usrService:UrlService, private _http:Http,private _tokenService:TokenService) {
@@ -49,7 +49,7 @@ export class EstudianteSaService {
   }
 
   //Buscar por Estudiante
-  buscarSAsPorEstudianteSA(id:string){
+  buscarSAsPorEstudianteSA(id:number){
     return this._http
       .get(this.url+'?idEstudiante='+`${id}`)
       .map(res => {

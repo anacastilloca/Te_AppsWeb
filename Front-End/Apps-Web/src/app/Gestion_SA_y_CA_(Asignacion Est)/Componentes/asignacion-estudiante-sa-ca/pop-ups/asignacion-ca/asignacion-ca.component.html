@@ -1,3 +1,37 @@
-<p>
-  asignacion-ca works!
-</p>
+<!--MODAL para ver una Secuencia de Acciones-->
+<div class="modal fade" id="asignacionCAModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!--Contenido del modal-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Secuencias de Acciones</h4>
+      </div>
+      {{estudiante.nombre}} {{estudiante.id}}
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-5">
+            <input type="checkbox"> Seleccionar Todo
+          </div>
+          <div class="col-sm-7">
+            <div  >
+              <label class="checkbox" *ngFor="let ca of comunicacionesAlternativas">
+                <input type="checkbox" [value]=ca.id (change)="onChange(ca.id,estudiante.id,$event)">
+                {{ca.nombre}}
+              </label>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Salir</button>
+      </div>
+
+    </div>
+  </div>
+</div>

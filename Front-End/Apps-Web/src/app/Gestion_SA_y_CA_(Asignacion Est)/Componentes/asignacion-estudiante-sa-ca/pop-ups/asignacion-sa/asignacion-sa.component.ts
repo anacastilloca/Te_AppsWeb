@@ -21,6 +21,7 @@ export class AsignacionSaComponent implements OnInit {
 
   //Para asignar y quitar SA a un estudiante
   estudianteSA:Estudiante_SAClass;
+  auxESA:any;
 
   constructor(private __secuenciaAccionesService:SecueniaAccionesService, private _estudianteSA_Service:EstudianteSaService) {
     this.secuenciaAcciones=new SecuenaAccionesClass("");
@@ -61,12 +62,23 @@ export class AsignacionSaComponent implements OnInit {
   }
 
   onChange(sa,estu,evento){
-
     if(evento.target.checked){
-      this.estudianteSA.idEstudiante=estu;
-      this.estudianteSA.idSecuenciaAcciones=sa;
-      this.asignarEstudiante_SA()
-      console.log("Dato creado", this.estudianteSA)
+      this.auxESA=this.estudianteSA
+      this.auxESA.idEstudiante=estu;
+      this.auxESA.idSecuenciaAcciones=sa;
+
+      this._estudianteSA_Service.ingresoEstudianteSecuenciAcciones(this.auxESA)
+        .subscribe(
+          (estudianteSecuenciaAccionesCreado:SecuenaAccionesClass) => {
+            estudianteSecuenciaAccionesCreado = new Estudiante_SAClass();
+            console.log('Ver que llega',this.estudianteSA)
+          },
+          error => {
+            console.log("Error",error);
+          }
+        )
+     console.log("Dato creado", this.estudianteSA)
+
     }else if(!evento.target.checked) {
       console.log("Eliminarrr")
     }

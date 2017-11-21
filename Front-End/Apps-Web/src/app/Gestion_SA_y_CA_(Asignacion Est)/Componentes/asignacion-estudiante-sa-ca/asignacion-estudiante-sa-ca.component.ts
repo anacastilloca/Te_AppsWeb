@@ -38,7 +38,21 @@ export class AsignacionEstudianteSaCaComponent implements OnInit {
       )
   }
 
+  modalVer(indice){
+    this.validacionModal=true;
+    this.estudiante=this.estudiantes[indice];
+    // console.log(this.estudiantes[indice])
+    //this.nombreTerapeuta=(this.estudiante.idTerapeuta['nombre']);
+   // console.log(this.estudiante.id)
+  }
+
   modalasignacionSAModal(indice){
+    this.validacionModal=true;
+    this.estudiante=this.estudiantes[indice];
+    console.log(this.estudiante)
+  }
+
+  modalasignacionCAModal(indice){
     this.validacionModal=true;
     this.estudiante=this.estudiantes[indice];
     console.log(this.estudiante)
