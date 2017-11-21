@@ -1,3 +1,74 @@
-<p>
-  gestion-sa works!
-</p>
+<div class="gestionT">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="tituloGT">Gestión de datos de la Secuencia de Acciones</h1>
+    </div>
+  </div>
+  <div class="row " id="cuerpoGT">
+    <div class="col-sm-5">
+      <label class="labelGT">Nombre:</label>
+      <input class="inputGT" type="text" name="buscarSecuenciaAccion"
+             placeholder="Ingrese el Nombre de la Secuencia de Acción" [(ngModel)]="busquedaPorNombre"/>
+    </div>
+    <div class="col-sm-3">
+      <button id="btnBuscar" class="btn btn-primary">
+        <span class="glyphicon glyphicon-search"></span>
+        Buscar
+      </button>
+    </div>
+    <div class="col-sm-4">
+      <button id="btnAgregar" class="btn btn-success pull-right" data-toggle="modal" data-target="#agregarModal">
+        <span class="glyphicon glyphicon-plus"> </span>
+        Agregar
+      </button>
+    </div>
+    <app-agregar-sa (actualizacionTablaSA)="presentacionActualizadaAgregar($event)" > </app-agregar-sa>
+   </div>
+
+  <div class="tablaGT">
+    <table class="table table-hover">
+      <thead class="thead-default">
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Imágenes</th>
+        <th>Acciones</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let sa of secuenciasAcciones | busquedaSa:busquedaPorNombre; let indice=index">
+        <td>{{indice+1}}</td>
+        <td>{{sa.nombre}}</td>
+        <td class="img-columns">
+          <img [src]="sa.imagen1" alt=""  class="imagenSA"> &nbsp;
+          <img [src]="sa.imagen2" alt=""  class="imagenSA"> &nbsp;
+          <img [src]="sa.imagen3" alt=""  class="imagenSA"> &nbsp;
+          <img [src]="sa.imagen4" alt=""  class="imagenSA"> &nbsp;
+          <img [src]="sa.imagen5" alt=""  class="imagenSA"> &nbsp;
+          <img [src]="sa.imagen6" alt=""  class="imagenSA"> </td>
+        <td>
+          <button class="btn btn-info" data-toggle="modal" (click)="modalVer(indice)" data-target="#verModal">Ver </button>
+
+          <button class="btn btn-warning" data-toggle="modal" (click)="modalEditar(indice)" data-target="#editarModal">
+            <span class="glyphicon glyphicon-pencil"></span>
+          </button>
+
+          <button class="btn btn-danger">
+            <span class="glyphicon glyphicon-trash" data-toggle="modal" (click)="modalEliminar(indice)" data-target="#eliminarModal"></span>
+          </button>
+
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <div *ngIf="validacionModal">
+      <app-ver-sa [secuenciaAcciones]="secuenciaAcciones" ></app-ver-sa>
+    </div>
+    <div *ngIf="validacionModal">
+      <app-editar-sa [secuenciaAcciones]="secuenciaAcciones"></app-editar-sa>
+    </div>
+    <div *ngIf="validacionModal">
+      <app-eliminar-sa [secuenciaAcciones]="secuenciaAcciones" (eliminarsecuenciaAcciones)="presentacionActualizadaEliminar($event)"></app-eliminar-sa>
+    </div>
+  </div>
+</div>

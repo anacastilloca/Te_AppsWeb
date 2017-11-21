@@ -1,0 +1,55 @@
+<!--MODAL para ver una Secuencia de Acciones-->
+<div class="modal fade" id="verModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!--Contenido del modal-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Datos de la Secuencia de Acciones</h4>
+      </div>
+
+      <div class="modal-body">
+        <form  #terapeutaFormulario="ngForm" nonvalidate>
+          <div class="form-group">
+            <p>
+              <label class="labelGT">Nombre:</label>
+              <input class="inputGT"
+                     name="nombreSA" type="text"
+                     [(ngModel)]="secuenciaAcciones.nombre"
+                     #nombreSA="ngModel"
+              />
+            </p>
+            <p>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Primeras 1 y 2 </th>
+                  <th>Segundas 3 y 4</th>
+                  <th>Últimas 5 y 6</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td><img [src]="secuenciaAcciones.imagen1" alt="" class="imagenSAVer"> </td>
+                <td><img [src]="secuenciaAcciones.imagen3" alt="" class="imagenSAVer"></td>
+                <td><img [src]="secuenciaAcciones.imagen5" alt="" class="imagenSAVer"></td>
+              </tr>
+              <tr>
+                <td><img [src]="secuenciaAcciones.imagen2" alt="" class="imagenSAVer"> </td>
+                <td><img [src]="secuenciaAcciones.imagen4" alt="" class="imagenSAVer"></td>
+                <td><img [src]="secuenciaAcciones.imagen6" alt="" class="imagenSAVer"></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Salir</button>
+      </div>
+
+    </div>
+  </div>
+</div>

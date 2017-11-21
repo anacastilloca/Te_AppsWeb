@@ -71,7 +71,8 @@ module.exports = {
   },
   logInFacebook:function (req,res) {
 
-  }
+  },
+
 
 };
 

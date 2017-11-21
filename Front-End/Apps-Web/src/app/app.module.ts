@@ -13,11 +13,13 @@ import { SaCaModule } from "./Gestion_SA_y_CA_(Asignacion Est)/principal-sa-ca/s
 //Componentes
 import { AppComponent } from './app.component';
 import { LoginComponent } from './Gestion_Usuarios/Componentes/login/login.component';
+import { BusquedaAsigEstPipe } from './Gestion_SA_y_CA_(Asignacion Est)/Componentes/asignacion-estudiante-sa-ca/pipes/busqueda-asig-est.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    BusquedaAsigEstPipe,
 
   ],
   imports: [
