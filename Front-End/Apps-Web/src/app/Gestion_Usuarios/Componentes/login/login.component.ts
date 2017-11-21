@@ -92,7 +92,21 @@ export class LoginComponent implements OnInit {
 
     }else {
       console.log("Es estudiante");
-      this._authService.hacerLoginEst(this.ruc_cedula,this.contrasenia)
+      this._authEstudiante.logIn(this.ruc_cedula,this.contrasenia)
+        .map(res => res.json())
+        .subscribe(
+          token=>{
+            //console.log(token);
+            console.log(token.idEstudiante);
+            this.idEstudianteLog=(token.idEstudiante).toString();
+            this.nombreEstudiante=token.nombreEstudiante;
+            localStorage.setItem('idEstudianteLog',this.idEstudianteLog);
+            localStorage.setItem('nombreEstudiante',this.nombreEstudiante)
+            this._router.navigate(['saca/sa']);
+          },
+          errorServidor=>{
+            alert("El usuario o la contraseña son incorrectos");
+          })
     }
 
     //localStorage.setItem('ruc_cedula',this.ruc_cedula);

@@ -1,0 +1,63 @@
+.gestionE{
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+.tituloGE{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 250%;
+  font-weight: bold;
+}
+
+#cuerpoGE{
+  margin: 1% 10% 2% 10%;
+}
+
+.col-sm-4{
+  font-size: 125%;
+}
+
+#btnBuscar{
+  margin: 5% 0 0 0;
+}
+
+.tablaGE{
+  margin: 1% 10% 2% 10%;
+  height: 600px;
+  overflow-y: auto;
+}
+
+.table{
+  font-size: 100%;
+}
+
+
+.form-group{
+  text-align: center;
+}
+
+.labelGE{
+  background: #565656;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 8px 0px 8px 0px;
+  width: 25%;
+  margin: 10px 0 0 0;
+  border: 1px solid;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  text-align: center ;
+}
+
+.inputGE{
+  font-size: 16px;
+  padding: 8px 0 8px 0px;
+  width: 70%;
+  border: 1px solid;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.modal-title{
+  font-weight: bold;
+  text-align: center;
+}

@@ -13,13 +13,18 @@ import {AgregarSaComponent} from "../Componentes/gestion-sa/pop-ups/agregar-sa/a
 import {EditarSaComponent} from "../Componentes/gestion-sa/pop-ups/editar-sa/editar-sa.component"
 import {VerSaComponent} from "../Componentes/gestion-sa/pop-ups/ver-sa/ver-sa.component"
 import {EliminarSaComponent} from "../Componentes/gestion-sa/pop-ups/eliminar-sa/eliminar-sa.component"
+import {AsignacionSaComponent} from "../Componentes/asignacion-estudiante-sa-ca/pop-ups/asignacion-sa/asignacion-sa.component"
+import {AsignacionCaComponent} from "../Componentes/asignacion-estudiante-sa-ca/pop-ups/asignacion-ca/asignacion-ca.component"
+import {VerInfoEstComponent} from "../Componentes/asignacion-estudiante-sa-ca/pop-ups/ver-info-est/ver-info-est.component"
 
 //Servicios
 import {SecueniaAccionesService} from "../Servicios/secuenia-acciones.service"
 import {ComunicacionAlternativaService} from "../Servicios/comunicacion-alternativa.service"
+import {EstudianteSaService} from "../Servicios/estudiante-sa.service"
 
 //Pipes
 import {BusquedaSaPipe} from "../Componentes/gestion-sa/pipes/busqueda-sa.pipe"
+import {BusquedaAsigEstPipe} from "../Componentes/asignacion-estudiante-sa-ca/pipes/busqueda-asig-est.pipe"
 
 @NgModule({
   declarations: [
@@ -31,7 +36,11 @@ import {BusquedaSaPipe} from "../Componentes/gestion-sa/pipes/busqueda-sa.pipe"
     EditarSaComponent,
     VerSaComponent,
     EliminarSaComponent,
-    BusquedaSaPipe
+    BusquedaSaPipe,
+    BusquedaAsigEstPipe,
+    AsignacionSaComponent,
+    AsignacionCaComponent,
+    VerInfoEstComponent,
   ],
   imports:[
     FormsModule,
@@ -49,10 +58,14 @@ import {BusquedaSaPipe} from "../Componentes/gestion-sa/pipes/busqueda-sa.pipe"
     EditarSaComponent,
     VerSaComponent,
     EliminarSaComponent,
+    AsignacionSaComponent,
+    AsignacionCaComponent,
+    VerInfoEstComponent,
   ],
   providers:[
     SecueniaAccionesService,
     ComunicacionAlternativaService,
+    EstudianteSaService,
   ]
 })
 
