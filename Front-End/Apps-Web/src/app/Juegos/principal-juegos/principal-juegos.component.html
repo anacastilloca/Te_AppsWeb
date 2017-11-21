@@ -1,0 +1,47 @@
+<div class="navegation col-sm-12">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a [routerLink]="['saN1']" class="navbar-brand">Juegos</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-th"></span> Secuencia de Acciones<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a [routerLink]="['saN1']" [routerLinkActive]="['active']" >Nivel 1</a></li>
+            <li><a [routerLink]="['saN2']" [routerLinkActive]="['active']" >Nivel 2</a></li>
+            <li><a [routerLink]="['saN3']" [routerLinkActive]="['active']" >Nivel 3</a></li>
+            <li><a [routerLink]="['saN4']" [routerLinkActive]="['active']" >Nivel 4</a></li>
+          </ul>
+        </li>
+        <li>
+          <a [routerLink]="['comAlt']" [routerLinkActive]="['active']" >
+            <span class="glyphicon glyphicon-picture"></span>
+            Comunicación Alternativa
+          </a>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a>
+            <span class="glyphicon glyphicon-user"> </span>
+            {{nombreEstudiante}}
+          </a>
+        </li>
+
+        <li>
+          <a role="button" (click)="desLogearse()" [routerLink]="['/']">
+            <span class="glyphicon glyphicon-lock"></span>
+            Salir
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+</div>
+<!--Para el login-->
+<router-outlet></router-outlet>
+

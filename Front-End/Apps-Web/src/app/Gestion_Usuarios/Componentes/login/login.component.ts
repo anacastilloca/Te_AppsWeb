@@ -102,7 +102,7 @@ export class LoginComponent implements OnInit {
             this.nombreEstudiante=token.nombreEstudiante;
             localStorage.setItem('idEstudianteLog',this.idEstudianteLog);
             localStorage.setItem('nombreEstudiante',this.nombreEstudiante)
-            this._router.navigate(['saca/sa']);
+            this._router.navigate(['juegos/saN1']);
           },
           errorServidor=>{
             alert("El usuario o la contraseña son incorrectos");
