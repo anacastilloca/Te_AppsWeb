@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60f0ba0f-756e-4b13-b511-2ce32b18db32" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/principal-juegos/juegos-module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/principal-juegos/juegos-routing-module.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/asignacion-estudiante-sa-ca/asignacion-estudiante-sa-ca.component.html" afterPath="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/asignacion-estudiante-sa-ca/asignacion-estudiante-sa-ca.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_Usuarios/Componentes/login/login.component.ts" afterPath="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_Usuarios/Componentes/login/login.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Front-End/Apps-Web/src/app/app.module.ts" afterPath="$PROJECT_DIR$/Front-End/Apps-Web/src/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-sa/gestion-sa.component.ts" afterPath="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-sa/gestion-sa.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Servicios/estudiante-sa.service.ts" afterPath="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Servicios/estudiante-sa.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/Componentes/juego-sa/Niveles/nivel1/nivel1.component.css" afterPath="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/Componentes/juego-sa/Niveles/nivel1/nivel1.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/Componentes/juego-sa/Niveles/nivel1/nivel1.component.html" afterPath="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/Componentes/juego-sa/Niveles/nivel1/nivel1.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/Componentes/juego-sa/Niveles/nivel1/nivel1.component.ts" afterPath="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/Componentes/juego-sa/Niveles/nivel1/nivel1.component.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,7 +23,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="nivel1.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/Componentes/juego-sa/Niveles/nivel1/nivel1.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="40" column="65" lean-forward="false" selection-start-line="40" selection-start-column="65" selection-end-line="40" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nivel1.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/Componentes/juego-sa/Niveles/nivel1/nivel1.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="792">
+              <caret line="49" column="28" lean-forward="false" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#69#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -56,10 +79,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-sa/pop-ups/ver-sa/ver-sa.component.css" />
-        <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-sa/pop-ups/eliminar-sa/eliminar-sa.component.ts" />
-        <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-sa/pop-ups/ver-sa/ver-sa.component.html" />
-        <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-sa/pop-ups/agregar-sa/agregar-sa.component.ts" />
         <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-sa/pop-ups/agregar-sa/agregar-sa.component.css" />
         <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-sa/pop-ups/editar-sa/editar-sa.component.ts" />
         <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-sa/gestion-sa.component.html" />
@@ -76,7 +95,6 @@
         <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-ca/pop-ups/agregar-ca/agregar-ca.component.ts" />
         <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-ca/pop-ups/agregar-ca/agregar-ca.component.css" />
         <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-ca/pop-ups/agregar-ca/agregar-ca.component.html" />
-        <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-sa/gestion-sa.component.ts" />
         <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-ca/gestion-ca.component.ts" />
         <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-ca/gestion-ca.component.css" />
         <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-ca/pop-ups/editar-ca/editar-ca.component.ts" />
@@ -93,7 +111,6 @@
         <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Modelos/Estudiante_CA/Estudiante_CAClass.ts" />
         <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/asignacion-estudiante-sa-ca/pop-ups/asignacion-ca/asignacion-ca.component.ts" />
         <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/asignacion-estudiante-sa-ca/pop-ups/asignacion-ca/asignacion-ca.component.html" />
-        <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Servicios/estudiante-sa.service.ts" />
         <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Servicios/estudiante-ca.service.ts" />
         <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_Usuarios/Componentes/gestion-estudiante/gestion-estudiante.component.ts" />
         <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/asignacion-estudiante-sa-ca/asignacion-estudiante-sa-ca.component.ts" />
@@ -107,6 +124,12 @@
         <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_Usuarios/Componentes/login/login.component.ts" />
         <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/principal-juegos/juegos-routing-module.ts" />
         <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/principal-juegos/principal-juegos.component.html" />
+        <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-sa/gestion-sa.component.ts" />
+        <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Servicios/estudiante-sa.service.ts" />
+        <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_Usuarios/Componentes/gestion-terapeuta/gestion-terapeuta.component.css" />
+        <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/Componentes/juego-sa/Niveles/nivel1/nivel1.component.css" />
+        <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/Componentes/juego-sa/Niveles/nivel1/nivel1.component.ts" />
+        <option value="$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/Componentes/juego-sa/Niveles/nivel1/nivel1.component.html" />
       </list>
     </option>
   </component>
@@ -127,7 +150,7 @@
     <handled-path value="$PROJECT_DIR$/Back-End/DB/Juegos-SA-CA/node_modules" />
     <handled-path value="$PROJECT_DIR$/Front-End/Apps-Web/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="814" />
     <option name="height" value="788" />
@@ -188,7 +211,62 @@
               <item name="Apps-Web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Gestion_SA_y_CA_(Asignacion Est)" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Te_AppsWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Te_AppsWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="Front-End" type="462c0819:PsiDirectoryNode" />
+              <item name="Apps-Web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Gestion_Usuarios" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Te_AppsWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Te_AppsWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="Front-End" type="462c0819:PsiDirectoryNode" />
+              <item name="Apps-Web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Gestion_Usuarios" type="462c0819:PsiDirectoryNode" />
+              <item name="Componentes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Te_AppsWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Te_AppsWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="Front-End" type="462c0819:PsiDirectoryNode" />
+              <item name="Apps-Web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Gestion_Usuarios" type="462c0819:PsiDirectoryNode" />
+              <item name="Componentes" type="462c0819:PsiDirectoryNode" />
+              <item name="gestion-terapeuta" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Te_AppsWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Te_AppsWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="Front-End" type="462c0819:PsiDirectoryNode" />
+              <item name="Apps-Web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Gestion_Usuarios" type="462c0819:PsiDirectoryNode" />
+              <item name="Componentes" type="462c0819:PsiDirectoryNode" />
+              <item name="gestion-terapeuta" type="462c0819:PsiDirectoryNode" />
+              <item name="pop-up" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Te_AppsWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Te_AppsWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="Front-End" type="462c0819:PsiDirectoryNode" />
+              <item name="Apps-Web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Gestion_Usuarios" type="462c0819:PsiDirectoryNode" />
+              <item name="Componentes" type="462c0819:PsiDirectoryNode" />
+              <item name="gestion-terapeuta" type="462c0819:PsiDirectoryNode" />
+              <item name="pop-up" type="462c0819:PsiDirectoryNode" />
+              <item name="agregar-pop-up" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Te_AppsWeb" type="b2602c69:ProjectViewProjectNode" />
@@ -231,6 +309,19 @@
               <item name="Componentes" type="462c0819:PsiDirectoryNode" />
               <item name="juego-sa" type="462c0819:PsiDirectoryNode" />
               <item name="Niveles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Te_AppsWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Te_AppsWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="Front-End" type="462c0819:PsiDirectoryNode" />
+              <item name="Apps-Web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Juegos" type="462c0819:PsiDirectoryNode" />
+              <item name="Componentes" type="462c0819:PsiDirectoryNode" />
+              <item name="juego-sa" type="462c0819:PsiDirectoryNode" />
+              <item name="Niveles" type="462c0819:PsiDirectoryNode" />
+              <item name="nivel1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Te_AppsWeb" type="b2602c69:ProjectViewProjectNode" />
@@ -314,18 +405,19 @@
       <workItem from="1511102905198" duration="21008000" />
       <workItem from="1511126984195" duration="22754000" />
       <workItem from="1511185915220" duration="49356000" />
-      <workItem from="1511273091483" duration="21341000" />
+      <workItem from="1511273091483" duration="30232000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="343946000" />
+    <option name="totallyTimeSpent" value="352837000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.304375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42428198" sideWeight="0.508125" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -360,98 +452,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-sa/gestion-sa.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-413">
-          <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-sa/pop-ups/ver-sa/ver-sa.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="19" lean-forward="true" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-ca/pop-ups/agregar-ca/agregar-ca.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="54" column="22" lean-forward="true" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-ca/pop-ups/ver-ca/ver-ca.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="40" column="72" lean-forward="false" selection-start-line="40" selection-start-column="72" selection-end-line="40" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-sa/gestion-sa.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="17" column="10" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-ca/gestion-ca.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="53" column="1" lean-forward="true" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-ca/pop-ups/eliminar-ca/eliminar-ca.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="24" column="80" lean-forward="false" selection-start-line="24" selection-start-column="80" selection-end-line="24" selection-end-column="80" />
-          <folding>
-            <element signature="e#0#96#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-sa/pop-ups/eliminar-sa/eliminar-sa.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="20" column="2" lean-forward="false" selection-start-line="20" selection-start-column="2" selection-end-line="31" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-ca/pop-ups/editar-ca/editar-ca.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="85" />
-          <folding>
-            <element signature="e#0#74#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-ca/gestion-ca.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="70" column="107" lean-forward="false" selection-start-line="70" selection-start-column="107" selection-end-line="70" selection-end-column="107" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-ca/pop-ups/eliminar-ca/eliminar-ca.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="83" lean-forward="false" selection-start-line="10" selection-start-column="83" selection-end-line="10" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-sa/pop-ups/eliminar-sa/eliminar-sa.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -538,14 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_Usuarios/Componentes/gestion-terapeuta/gestion-terapeuta.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="39" column="42" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -652,14 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Servicios/estudiante-sa.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="51" column="36" lean-forward="false" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/asignacion-estudiante-sa-ca/pop-ups/asignacion-sa/asignacion-sa.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -683,7 +667,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#0#52#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -693,7 +677,7 @@
         <state relative-caret-position="102">
           <caret line="9" column="37" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -703,7 +687,7 @@
         <state relative-caret-position="-408">
           <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -721,7 +705,7 @@
         <state relative-caret-position="272">
           <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="27" selection-end-column="3" />
           <folding>
-            <element signature="e#0#78#0" expanded="true" />
+            <element signature="e#0#78#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -742,28 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/principal-juegos/juegos-module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-            <element signature="e#255#325#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-            <element signature="e#588#635#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/principal-juegos/principal-juegos.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -772,22 +734,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_Usuarios/Componentes/login/login.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="104" column="47" lean-forward="false" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/principal-juegos/principal-juegos.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="25" />
           <folding>
-            <element signature="e#0#69#0" expanded="true" />
+            <element signature="e#0#69#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -797,9 +749,151 @@
         <state relative-caret-position="289">
           <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#113#183#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
+            <element signature="e#113#183#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#58#0" expanded="false" />
+            <element signature="e#588#635#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/principal-juegos/juegos-module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+            <element signature="e#255#325#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/asignacion-estudiante-sa-ca/pop-ups/ver-info-est/ver-info-est.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/asignacion-estudiante-sa-ca/asignacion-estudiante-sa-ca.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-663">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-sa/pop-ups/ver-sa/ver-sa.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-sa/gestion-sa.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="50" column="1" lean-forward="false" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_Usuarios/Componentes/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="102" column="49" lean-forward="false" selection-start-line="102" selection-start-column="34" selection-end-line="102" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Servicios/estudiante-sa.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="51" column="36" lean-forward="false" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_Usuarios/Componentes/gestion-terapeuta/pop-up/agregar-pop-up/agregar-pop-up.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="31" column="16" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="31" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_SA_y_CA_(Asignacion Est)/Componentes/gestion-sa/gestion-sa.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#69#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_Usuarios/Componentes/gestion-terapeuta/gestion-terapeuta.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-272">
+          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_Usuarios/Componentes/gestion-terapeuta/gestion-terapeuta.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Gestion_Usuarios/Componentes/gestion-terapeuta/gestion-terapeuta.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/Componentes/juego-sa/Niveles/nivel1/nivel1.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/Componentes/juego-sa/Niveles/nivel1/nivel1.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="49" column="28" lean-forward="false" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/Apps-Web/src/app/Juegos/Componentes/juego-sa/Niveles/nivel1/nivel1.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="40" column="65" lean-forward="false" selection-start-line="40" selection-start-column="65" selection-end-line="40" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>

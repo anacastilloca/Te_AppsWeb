@@ -1,3 +1,46 @@
-<p>
-  nivel1 works!
-</p>
+<div class="gestionT">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="tituloGT">Secuencia de Acciones</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6"> <h1>No Secuencial </h1></div>
+    <div class="col-sm-6">
+      <button id="btnCambiar" class="btn btn-success pull-right">
+        Cambiar Secuencia
+      </button>
+    </div>
+  </div>
+  <div class="row" id="cuadroNoSecuencial">
+    <div *ngFor="let es_sa of estudiantesSAs; let indice=index">
+      <div *ngIf="primerSAaPresentar==indice" >
+        <div class="col-sm-4">
+          <button class="btn btn-default" (click)="validacionImg(es_sa.idSecuenciaAcciones['imagen1'],es_sa.idSecuenciaAcciones['imagen2'],es_sa.idSecuenciaAcciones['imagen3'])">
+            <img [src]="es_sa.idSecuenciaAcciones['imagen3']" alt=""></button>
+        </div>
+        <div class="col-sm-4">
+          <button class="btn btn-default"><img [src]="es_sa.idSecuenciaAcciones['imagen1']" alt=""  ></button>
+        </div>
+        <div class="col-sm-4">
+          <button  class="btn btn-default"><img [src]="es_sa.idSecuenciaAcciones['imagen2']" alt="" ></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6"> <h1>Secuencial </h1></div>
+    <div class="col-sm-6">
+      <button id="btnSiguiente" class="btn btn-info pull-right">
+        <span class="glyphicon glyphicon-forward"></span>Siguiente Nivel
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <button  class="btn btn-default"><img [src]="validacionImg1" alt="" ></button>
+    </div>
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4"></div>
+  </div>
+</div>

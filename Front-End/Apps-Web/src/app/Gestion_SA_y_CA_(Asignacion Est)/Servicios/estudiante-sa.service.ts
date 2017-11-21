@@ -49,7 +49,7 @@ export class EstudianteSaService {
   }
 
   //Buscar por Estudiante
-  buscarSAsPorEstudianteSA(id:number){
+  buscarSAsPorEstudianteSA(id:string){
     return this._http
       .get(this.url+'?idEstudiante='+`${id}`)
       .map(res => {
