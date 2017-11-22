@@ -1,3 +1,86 @@
-<p>
-  nivel2 works!
-</p>
+<div class="gestionT">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="tituloGT">Secuencia de Acciones NIVEL 2</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6"> <h1>No Secuencial </h1></div>
+    <div class="col-sm-6">
+      <button id="btnCambiar" class="btn btn-success pull-right" data-toggle="modal" data-target="#cambiarSA">
+        Cambiar Secuencia
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="cambiarSA" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Secuencias de Acciones Asignadas</h4>
+            </div>
+            <div class="modal-body">
+              <div class="radio" *ngFor="let es_sa of estudiantesSAs">
+                <label>
+                  <input type="radio" [value]=es_sa.id (click)="nuevaSA()">
+                  {{es_sa.idSecuenciaAcciones['nombre']}}
+                </label>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="row" id="cuadroNoSecuencial">
+    <div *ngFor="let es_sa of estudiantesSAs; let indice=index">
+      <div *ngIf="primerSAaPresentar==indice" >
+        <div class="col-sm-3">
+          <button class="btn btn-default" (click)="valImg4(es_sa.idSecuenciaAcciones['imagen4'])">
+            <img [src]="es_sa.idSecuenciaAcciones['imagen4']" alt=""></button>
+        </div>
+        <div class="col-sm-3">
+          <button class="btn btn-default" (click)="valImg1(es_sa.idSecuenciaAcciones['imagen1'])">
+            <img [src]="es_sa.idSecuenciaAcciones['imagen1']" alt=""  ></button>
+        </div>
+        <div class="col-sm-3">
+          <button class="btn btn-default" (click)="valImg2(es_sa.idSecuenciaAcciones['imagen2'])">
+            <img [src]="es_sa.idSecuenciaAcciones['imagen2']" alt="" ></button>
+        </div>
+        <div class="col-sm-3">
+          <button class="btn btn-default" (click)="valImg3(es_sa.idSecuenciaAcciones['imagen3'])">
+            <img [src]="es_sa.idSecuenciaAcciones['imagen3']" alt="" ></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" >
+    <div class="col-sm-6"> <h1>Secuencial </h1></div>
+    <div class="col-sm-6">
+      <button id="btnSiguiente" class="btn btn-info pull-right" (click)="nivel3()">
+        <span class="glyphicon glyphicon-forward"></span>Siguiente Nivel
+      </button>
+    </div>
+  </div>
+  <div class="row" id="cuadroSecuencial">
+    <div class="col-sm-3">
+      <div *ngIf="img1Val"><button class="btn btn-default"><img [src]="validacionImg1" alt="" ></button></div>
+    </div>
+    <div class="col-sm-3">
+      <div *ngIf="img2Val"><button class="btn btn-default"><img [src]="validacionImg2" alt="" ></button></div>
+    </div>
+    <div class="col-sm-3">
+      <div *ngIf="img3Val"><button class="btn btn-default"><img [src]="validacionImg3" alt="" ></button></div>
+    </div>
+    <div class="col-sm-3">
+      <div *ngIf="img4Val"><button class="btn btn-default"><img [src]="validacionImg4" alt="" ></button></div>
+    </div>
+  </div>
+</div>

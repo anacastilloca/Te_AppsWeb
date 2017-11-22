@@ -11,10 +11,9 @@
         {{estudiante.nombre}} {{estudiante.id}}
       <div class="modal-body">
         <div class="row">
-          <div class="col-sm-5">
-            <input type="checkbox"> Seleccionar Todo
+          <div class="col-sm-3">
           </div>
-          <div class="col-sm-7">
+          <div class="col-sm-8">
             <div  >
               <label class="checkbox" *ngFor="let sa of secuenciasAcciones">
                 <input type="checkbox" [value]=sa.id (change)="onChange(sa.id,estudiante.id,$event)">

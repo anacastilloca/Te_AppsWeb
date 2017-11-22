@@ -1,0 +1,36 @@
+.gestionT{
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  margin: 1% 10% 2% 10%;
+}
+.tituloGT{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 250%;
+  font-weight: bold;
+}
+
+#btnCambiar{
+  margin-top: 2%;
+}
+
+#btnSiguiente{
+  margin-top: 2%;
+}
+
+#cuadroNoSecuencial{
+  border: 1px solid;
+  text-align: center;
+}
+
+.imgN5{
+  width: 80%;
+  height: auto;
+  margin: 5% 5% 5% 5%;
+}
+
+#cuadroSecuencial{
+  background: gainsboro;
+  text-align: center;
+  padding: 1% 1% 1% 1%;
+}
+
