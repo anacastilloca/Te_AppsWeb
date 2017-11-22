@@ -15,6 +15,8 @@ export class AsignacionCaComponent implements OnInit {
 
   @Input() estudiante:EstudianteClass;
 
+  auxECA:any;
+
   comunicacionAlternativa:ComunicacionAlternativaClass;
   comunicacionesAlternativas:ComunicacionAlternativaClass[]=[];
 
@@ -42,6 +44,27 @@ export class AsignacionCaComponent implements OnInit {
           console.log("Error: ",error)
         }
       )
+  }
+
+  onChange(ca,estu,evento){
+    if(evento.target.checked){
+      this.auxECA=this.estudianteCA
+      this.auxECA.idEstudiante=estu;
+      this.auxECA.idComunicacionAlternativa=ca;
+
+      this._comunicacionAlternativa.ingresoComunicacionAlternativa(this.auxECA)
+        .subscribe(
+          (estudianteComunicacionAlternativaCreado:Estudiante_CAClass) => {
+            estudianteComunicacionAlternativaCreado = new Estudiante_CAClass();
+            console.log('Ver que llega',this.estudianteCA)
+          },
+          error => {
+            console.log("Error",error);
+          }
+        )
+      console.log("Dato creado", this.estudianteCA)
+
+    }
   }
 
 }

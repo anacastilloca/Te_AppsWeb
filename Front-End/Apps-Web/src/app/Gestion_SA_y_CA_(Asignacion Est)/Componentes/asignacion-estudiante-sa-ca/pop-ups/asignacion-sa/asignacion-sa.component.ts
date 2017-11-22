@@ -69,7 +69,7 @@ export class AsignacionSaComponent implements OnInit {
 
       this._estudianteSA_Service.ingresoEstudianteSecuenciAcciones(this.auxESA)
         .subscribe(
-          (estudianteSecuenciaAccionesCreado:SecuenaAccionesClass) => {
+          (estudianteSecuenciaAccionesCreado:Estudiante_SAClass) => {
             estudianteSecuenciaAccionesCreado = new Estudiante_SAClass();
             console.log('Ver que llega',this.estudianteSA)
           },
@@ -80,7 +80,22 @@ export class AsignacionSaComponent implements OnInit {
      console.log("Dato creado", this.estudianteSA)
 
     }else if(!evento.target.checked) {
-      console.log("Eliminarrr")
+
+      this.auxESA=this.estudianteSA
+      this.auxESA.idEstudiante=estu;
+      this.auxESA.idSecuenciaAcciones=sa;
+      this.auxESA.id=this.estudianteSA.id
+      console.log('Eliminado',this.auxESA.id)
+
+      this._estudianteSA_Service.borrarEstudianteSecuenciaAcciones(this.auxESA.id)
+        .subscribe(
+          ingreso => {
+            console.log(this.estudianteSA)
+          },
+          error => {
+            console.log("Error",error);
+          }
+        )
     }
 
     console.log('SA',sa);
@@ -90,19 +105,9 @@ export class AsignacionSaComponent implements OnInit {
     //console.log(e.target.checked)
   }
 
-
-
   eliminarEstudianteSecuenciaAcciones(){
     //console.log(this.secuenciaAcciones)
-    this._estudianteSA_Service.borrarEstudianteSecuenciaAcciones(this.estudianteSA)
-      .subscribe(
-        ingreso => {
-          console.log(this.estudianteSA)
-        },
-        error => {
-          console.log("Error",error);
-        }
-      )
+
   }
 
 }

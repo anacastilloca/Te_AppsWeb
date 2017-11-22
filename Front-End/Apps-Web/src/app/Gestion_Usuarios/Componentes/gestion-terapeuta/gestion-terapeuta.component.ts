@@ -16,6 +16,8 @@ export class GestionTerapeutaComponent implements OnInit {
   terapeuta:TerapeutaClass= new TerapeutaClass("");
   terapeutas:TerapeutaClass[]=[];
 
+  img1="assets/Imagenes/CA/conjugacionQuerer.jpg"
+
   constructor(private _terapeutaService:TerapeutaService) {
     console.log(localStorage.getItem('idOrganizacionLog'));
 

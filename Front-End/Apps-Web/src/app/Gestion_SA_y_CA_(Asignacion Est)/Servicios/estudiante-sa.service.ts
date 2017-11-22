@@ -41,8 +41,8 @@ export class EstudianteSaService {
       })
   }
 
-  borrarEstudianteSecuenciaAcciones(estudiante_secuenciaAcciones:Estudiante_SAClass){
-    return this._http.delete(this.url+`/${estudiante_secuenciaAcciones.id}`)
+  borrarEstudianteSecuenciaAcciones(id:number){
+    return this._http.delete(this.url+`/${id}`)
       .map(res =>{
         return res.json();
       })

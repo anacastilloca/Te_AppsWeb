@@ -1,7 +1,79 @@
 <div class="gestionT">
   <div class="row">
     <div class="col-sm-12">
-      <h1 class="tituloGT">Comunicación Alternativa</h1>
+      <h1 class="tituloGT">Comunicación alternativa</h1>
+      <img [src]="img1" alt="">
     </div>
+  </div>
+  <div class="row" id="principalCuadrado">
+    <div class="col-sm-6" id="principal">
+      <br>
+      <div class="row" >
+          <div class="col-sm-3">
+            <button class="btn btn-default" (click)="envioImg1()"><img [src]="imgCA1" alt=""></button>
+          </div>
+          <div class="col-sm-3">
+            <button class="btn btn-default" (click)="envioImg2()"><img [src]="imgCA2" alt=""></button>
+          </div>
+          <div class="col-sm-3">
+              <button class="btn btn-default" (click)="envioImg3()"><img [src]="imgCA3" alt=""></button>
+          </div>
+        <div class="col-sm-1"> </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-3">
+            <button class="btn btn-default" (click)="envioImg4()"><img [src]="imgCA4" alt=""></button>
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-default" (click)="envioImg5()"><img [src]="imgCA5" alt=""></button>
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-default" (click)="envioImg6()"><img [src]="imgCA6" alt=""></button>
+        </div>
+        <div class="col-sm-1">
+          <button class="btn btn-danger">
+            <span class="glyphicon glyphicon-remove"></span>
+          </button>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5" id="campoSemantico">
+      <div class="row">
+        <table class="table" id="camposS" *ngIf="campoSemantico">
+          <thead>
+          <tr>
+            <th>Campos Semántico</th>
+          </tr>
+          </thead>
+          <tbody >
+          <tr>
+            <td> <button class="btn btn-info" (click)="irCampoSemantico()">Verbos</button></td>
+          </tr>
+          <tr>
+            <td><button class="btn btn-info">Saludar</button></td>
+          </tr>
+          <tr>
+            <td><button class="btn btn-info">Sustantivos</button></td>
+          </tr>
+          </tbody>
+        </table>
+        <div *ngIf="contenidoCampoSemantico">
+          <app-contenido-ca></app-contenido-ca>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="row" id="oracion">
+    <div class="pre" *ngIf="presentarCA3"> <img [src]="imgCA3" alt=""></div>
+    <div class="pre" *ngIf="presentarCA1"> <img [src]="imgCA1" alt=""></div>
+    <div class="pre" *ngIf="presentarCA2"> <img [src]="imgCA2" alt=""></div>
+    <div class="pre" *ngIf="presentarCA4"> <img [src]="imgCA4" alt=""></div>
+    <div class="pre" *ngIf="presentarCA5"> <img [src]="imgCA5" alt=""></div>
+    <div class="pre" *ngIf="presentarCA6"> <img [src]="imgCA6" alt=""></div>
+
   </div>
 </div>

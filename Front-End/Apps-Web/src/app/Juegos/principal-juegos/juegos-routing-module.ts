@@ -9,6 +9,7 @@ import {Nivel1Component} from "../Componentes/juego-sa/Niveles/nivel1/nivel1.com
 import {Nivel2Component} from "../Componentes/juego-sa/Niveles/nivel2/nivel2.component";
 import {Nivel3Component} from "../Componentes/juego-sa/Niveles/nivel3/nivel3.component";
 import {Nivel4Component} from "../Componentes/juego-sa/Niveles/nivel4/nivel4.component";
+import {ContenidoCaComponent} from "../Componentes/juego-ca/Contenido Campo Semántico/contenido-ca/contenido-ca.component";
 
 const juegos_sa_ca_Routes:Routes=[
   {
@@ -20,7 +21,7 @@ const juegos_sa_ca_Routes:Routes=[
       { path:'saN2', component: Nivel2Component },
       { path:'saN3', component: Nivel3Component },
       { path:'saN4', component: Nivel4Component },
-      { path:'comAlt',component: JuegoCaComponent },
+      { path:'comAlt',component: JuegoCaComponent},
     ]
   },
 ];

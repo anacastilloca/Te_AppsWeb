@@ -11,6 +11,7 @@ import {Nivel1Component} from "../Componentes/juego-sa/Niveles/nivel1/nivel1.com
 import {Nivel2Component} from "../Componentes/juego-sa/Niveles/nivel2/nivel2.component";
 import {Nivel3Component} from "../Componentes/juego-sa/Niveles/nivel3/nivel3.component";
 import {Nivel4Component} from "../Componentes/juego-sa/Niveles/nivel4/nivel4.component";
+import {ContenidoCaComponent} from "../Componentes/juego-ca/Contenido Campo Semántico/contenido-ca/contenido-ca.component";
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import {Nivel4Component} from "../Componentes/juego-sa/Niveles/nivel4/nivel4.com
     Nivel2Component,
     Nivel3Component,
     Nivel4Component,
+    ContenidoCaComponent,
 
   ],
   imports:[
@@ -37,6 +39,7 @@ import {Nivel4Component} from "../Componentes/juego-sa/Niveles/nivel4/nivel4.com
     Nivel2Component,
     Nivel3Component,
     Nivel4Component,
+    ContenidoCaComponent,
   ],
   providers:[
   ]

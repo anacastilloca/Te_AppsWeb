@@ -15,7 +15,6 @@ import {JuegosModule} from "./Juegos/principal-juegos/juegos-module";
 import { AppComponent } from './app.component';
 import { LoginComponent } from './Gestion_Usuarios/Componentes/login/login.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

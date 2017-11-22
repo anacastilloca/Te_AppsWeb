@@ -1,0 +1,44 @@
+.gestionT{
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  margin: 1% 10% 2% 10%;
+}
+.tituloGT{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 250%;
+  font-weight: bold;
+}
+
+#btnCambiar{
+  margin-top: 2%;
+}
+
+#cuadroNoSecuencial{
+  border: 1px solid;
+  text-align: center;
+}
+
+#principal{
+  border: 2px solid silver;
+  text-align: center;
+}
+
+#campoSemantico{
+  border: 2px solid silver;
+  text-align: center;
+  padding: 2% 2% 2% 2%;
+}
+
+#camposS{
+  overflow-y: auto;
+}
+
+#oracion{
+  overflow:hidden;
+  border: 2px solid silver;
+  padding: 2% 2% 2% 2%;
+}
+.pre{
+  float: left;
+}
+
